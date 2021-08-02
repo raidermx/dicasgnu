@@ -1,0 +1,42 @@
+virtualização
+kvm - módulo do kernel  
+qemu - hardware
+libvirt - api
+virsh - cli
+virt-manager - gráfico
+
+
+funciona com bios ou uefi
+
+o hd virtual é um arquivo na máquina real  .qcow ou .raw
+o dvd virtual é um arquivo iso
+
+interface virtual  usa a rede da máquina real.
+dentro disso tem um switch virtual com servidor dchcp e nat
+maquina virtual acessa maquina real e vice-versa
+
+instalação dos recursos de virtualização:
+
+lscpu
+para intel
+grep vmx /proc/cpuinfo
+para amd
+grep svm /proc/cpuinfo
+
+apt install virt-manager
+apt install virsh
+
+systemctl status libvirtd
+virsh list --all
+
+lsb_release -all
+
+adduser carlostorres libvirt
+id carlostorres
+newgrp
+exit
+
+virsh list -all
+virsh start --domain VM
+virsh start VM
+virt-manager

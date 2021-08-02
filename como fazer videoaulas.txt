@@ -1,0 +1,51 @@
+jitsi 
+streamyard
+google meet
+
+obs-studio
+
+apt install linux-libre-headers
+apt install linux-headers-amd64
+apt install v4l2loopback-dkms
+
+https://github.com/kretcheu/dicas/blob/master/obs.camera.virtual.md
+
+mkdir /tmp/plugin
+cd /tmp/plugin
+wget https://github.com/CatxFish/obs-v4l2sink/releases/download/0.1.0/obs-v4l2sink.deb
+dpkg -x obs-v4l2sink.deb /tmp/plugin
+
+cp /tmp/plugin/usr/lib/obs-plugins/v4l2sink.so /usr/lib/x86_64-linux-gnu/obs-plugins/
+
+cd
+
+rm /tmp/plugin -r
+
+modprobe v4l2loopback devices=1 video_nr=20 card_label="v4l2loopback" exclusive_caps=1
+
+lsmod | less
+ls -l /dev/video*
+
+abrir obs habilitar plugin iniiar transmissao settings start
+iniciar conferencia
+fechar conferencia
+desabilitar plugin  settings stop
+desabilitar módulo
+modprobe -r v4l2loopback
+
+vim /etc/modprobe.d/v4l2loopback.conf
+options v4l2loopback devices=1 video_nr=20 card_label="v4l2loopbak" exclusive_caps=1
+
+A partir daí para carregar o módulo digite:
+```
+modprobe v4l2loopback
+```
+
+### Para carregar o módulo sempre que der boot
+
+Edte o arquivo: /etc/modules-load.d/modules.conf
+inclua a linha:
+```
+v4l2loopback
+```
+-
