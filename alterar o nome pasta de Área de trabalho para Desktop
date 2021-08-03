@@ -1,0 +1,8 @@
+alterar o nome pasta de Área de trabalho para Desktop
+
+vim .config/user-dirs.dirs
+
+Alterar a linha
+
+XDG_­DESK­TOP_DIR=”$HOME/Desktop”
+
