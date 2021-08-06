@@ -1,0 +1,6 @@
+Para testar se o arquivo gzip não está corrompido:
+
+gunzip -t file.tar.gz
+Para testar se o arquivo tar interno não está corrompido:
+
+gunzip -c file.tar.gz | tar -t > /dev/null
