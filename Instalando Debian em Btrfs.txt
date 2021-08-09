@@ -117,7 +117,7 @@ e depois reinicia:
 alterar resolução do monitor
 xrandr -s 1920x1080
 apt update
-sudo apt-get install -y vim vim-gtk3 aptitude neofetch cmatrix aria2 tmux tmate ncal ccal gcal calc  links2 debsums deborphan htop hdparm vim timeshift akira gimp inkscape blender scribus krita kodi vlc flameshot darktable digikam mypaint kolourpaint rawtherapee librecad freecad leocad solvespace synfigstudio tupi openscad pencil2d octave scilab kruler ardour audacious kdenlive lmms mixxx musescore clementine shotcut ark  filezilla qtbittorrent uget youtube-dl tlp tlp-rdw okular cheese guvcview handbrake hydrogen mpv pitivi qtractor smplayer k3b brasero bluefish codeblocks emacs geany jedit minder scratch carmetal geogebra kicad electric stellarium tuxmath gnucash gnumeric calibre planner dia gedit cherrytree seahorse keepassxc focuswriter
+sudo apt-get install -y vim vim-gtk3 aptitude neofetch cmatrix aria2 tmux tmate ncal ccal gcal calc  links2 debsums deborphan htop hdparm vim timeshift akira gimp inkscape blender scribus krita kodi vlc flameshot darktable digikam mypaint kolourpaint rawtherapee librecad freecad leocad solvespace synfigstudio tupi openscad pencil2d octave scilab kruler ardour audacious kdenlive lmms mixxx musescore clementine shotcut ark  filezilla qbittorrent uget youtube-dl tlp tlp-rdw okular cheese guvcview handbrake hydrogen mpv pitivi qtractor smplayer k3b brasero bluefish codeblocks emacs geany jedit minder scratch carmetal geogebra kicad electric stellarium tuxmath gnucash gnumeric calibre planner dia gedit cherrytree seahorse keepassxc focuswriter
 
 sudo tlp start
 sudo btrfs subvolume snapshot / /.snapshots/10132020-root-snapshot
