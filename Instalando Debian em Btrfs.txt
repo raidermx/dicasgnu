@@ -1,0 +1,143 @@
+debian em btrfs
+advanced options
+expert install
+apos a detecção de disco 
+
+usar o fdisk
+disk
+gpt
+freespace
+600MB  EFI system
+8GB    linux SWAP
+64GB   linux raiz btrfs
+resto disco linux home btrfs
+--------------------------------
+terminou de particionar.
+---------------------------------
+ctrl alt f2
+df
+umount /target/boot/efi
+umount /target/
+mount /dev/sda3 /mnt
+cd /mnt
+-----------------------------------------------------------------------------------------------
+dentro do mnt:
+------------------------------------------------------------------------------------------------
+btrfs subvolume create @
+btrfs subvolume create @home
+btrfs subvolume create @snapshots
+btrfs subvolume list .
+--------------------
+id257
+id258
+id259
+----------------------
+mount -o rw,noatime,compress=lzo,space_cache,subvolid=257,subvol=@ /dev/sda3 /target
+mkdir -p /target/home
+mkdir -p /target/.snapshots
+mount -o rw,noatime,compress=lzo,space_cache,subvolid=258,subvol=@home /dev/sda3 /target/home
+mount -o rw,noatime,compress=lzo,space_cache,subvolid=259,subvol=@snapshots /dev/sda3 /target/.snapshots
+ls
+---------------------------
+@    @home  @snapshots boot    etc   media
+-------------------------
+mv etc/ /target
+mv media/ /target
+cd boot
+ls -a
+-------------
+.  .. efi
+------------
+cd efi
+ls -a
+----------------
+. .. 
+----------------
+cd ..
+cd ..
+ls
+-------------------
+@  @home @snapshots boot
+--------------------
+rm -r boot/
+ls
+-------------------
+@  @home @snapshots 
+--------------------
+mkdir -p /target/boot/efi
+mount /dev/sda1 /target/boot/efi/
+
+------------------------------------------
+saindo do mnt
+---------------------------------------
+cd
+umount /mnt
+
+-----------------------------------
+entrando no target
+------------------------------------
+cd /target/
+ls
+-------------------------------
+boot etc home media
+------------------------------
+cd etc/
+ls
+------------------------------------------
+fstab
+------------------------------------------
+nano fstab
+
+em/dev/sda3  substitui defaults por
+
+UUID   /               btrfs       rw,noatime,compress=lzo,space_cache,subvolid=257,subvol=@
+UUID   /home           btrfs       rw,noatime,compress=lzo,space_cache,subvolid=258,subvol=@home
+UUID   /.snapshots     btrfs       rw,noatime,compress=lzo,space_cache,subvolid=259,subvol=@snapshots
+
+CTRL + x salvar
+
+cd
+CTRL D
+CTRL Alt F1
+
+prosseguir a instalação normal.
+
+xfce
+servidor impressão
+openssh
+utilitarios
+
+instala o isenkram:
+# apt install isenkram
+e depois roda o comando:
+#isenkram-autoinstall-firmware
+e depois reinicia:
+#reboot
+
+alterar resolução do monitor
+xrandr -s 1920x1080
+apt update
+sudo apt-get install -y vim vim-gtk3 aptitude neofetch cmatrix aria2 tmux tmate ncal ccal gcal calc  links2 debsums deborphan htop hdparm vim timeshift akira gimp inkscape blender scribus krita kodi vlc flameshot darktable digikam mypaint kolourpaint rawtherapee librecad freecad leocad solvespace synfigstudio tupi openscad pencil2d octave scilab kruler ardour audacious kdenlive lmms mixxx musescore clementine shotcut ark  filezilla qtbittorrent uget youtube-dl tlp tlp-rdw okular cheese guvcview handbrake hydrogen mpv pitivi qtractor smplayer k3b brasero bluefish codeblocks emacs geany jedit minder scratch carmetal geogebra kicad electric stellarium tuxmath gnucash gnumeric calibre planner dia gedit cherrytree seahorse keepassxc focuswriter
+
+sudo tlp start
+sudo btrfs subvolume snapshot / /.snapshots/10132020-root-snapshot
+sudo btrfs subvolume list /
+
+sudo vim /etc/fstab
+apagar os subvolids
+
+timeshift
+btrfs
+escolher /
+diariamente
+create
+
+sudo apt install materia-gtk-theme deepin-icon-theme -yy
+
+links externos
+conexao vnc
+brave browser
+chrome
+4k downloader
+teamviewer
+steam
