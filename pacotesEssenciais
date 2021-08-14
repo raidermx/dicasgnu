@@ -1,1 +1,91 @@
+pacotes essencias GNU
+
 sudo apt install cups vim vim-gtk3 aptitude neofetch cmatrix aria2 tmux tmate ncal ccal gcal calendar calc  links2 debsums deborphan htop hdparm vim timeshift akira gimp inkscape blender scribus krita kodi vlc flameshot darktable digikam mypaint kolourpaint rawtherapee librecad freecad leocad solvespace synfigstudio tupi openscad pencil2d octave scilab kruler ardour audacious kdenlive lmms mixxx musescore clementine shotcut ark  filezilla qbittorrent uget youtube-dl tlp tlp-rdw okular cheese guvcview handbrake hydrogen mpv pitivi qtractor smplayer k3b brasero bluefish codeblocks emacs geany jedit minder scratch carmetal geogebra kicad electric stellarium tuxmath gnucash gnumeric calibre planner dia gedit cherrytree seahorse keepassxc focuswriter gnome-calculator evolution pidgin obs-studio apt-listbugs gpm rygel rygel-preferences psensor vrms inxi hardinfo gparted grub-customizer tilix gnuplot ifenslave gnome-system-tools openvpn network-manager-openvpn-gnome gnome-disk-utility gnome-usage gnome-shell-extension-hard-disk-led baobab shotwell mangohud arch-install-scripts pdfarranger ristretto fonts-liberation firefox-esr evince xournal openshot gajim revolt 
+
+
+super pack do professor livre
+
+firefox esr
+apt install firefox-esr
+
+libreoffice
+apt install libreoffice
+
+família de fontes liberation
+apt install fonts-liberation
+
+liberation sans = Arial
+liberation serif = Times New Roman
+
+escrever fonte Arial
+escrever fonte Times New Roman
+salvar como docx
+
+leitor pdf
+evince
+
+editar pdfs
+apt install pdfarranger
+
+scribus
+apt install scribus
+
+calibre(ebook - abrir com ebook viewer)
+apt install calibre
+
+visualizador de imagens ristretto
+
+gimp - editor de imagens
+editar imagem e exportar
+
+apt install gimp
+
+libreoffice impress - slides
+libreoffice calc - planilhas
+libreoffice writer - word
+
+para rabiscos
+xournal
+apt install xournal
+
+mesa digitalizadora wacon one CTL-472
+apt install xserver-xorg-input-wacon
+
+Aulas por videoconferencia
+JITSI MEET - número de pessoas ilimitados
+grava suas aulas gratuitamente
+https://jitsi.com
+
+obs studio
+utilizado para gravar as video-aulas
+apt install obs-studio
+
+lossless cut - para cortar os vídeos
+cortar a parte desejada e exportar.
+
+https://github.com/mifi/lossless-cut/releases/tag/v3.37.0
+
+editor de video-aulas 
+kdenlive e openshot
+apt install kdenlive
+apt install openshot
+
+reprodutorap
+mpv e vlc
+apt install mpv
+apt install vlc
+
+gravador de audio
+audacity
+apt install audacity
+
+buscar imagens específicas - otimizar o fluxo de trabalho
+ls | grep jpg
+
+mensageiros livres
+gajim(xmpp), revolt(matrix), pidgin(irc, jabber e outros) e gomuks(matrix)
+
+apt install gajim
+apt install revolt
+apt install pidgin
+apt install gomuks
