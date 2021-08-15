@@ -93,4 +93,5 @@ gajim(xmpp), revolt(matrix), pidgin(irc, jabber e outros) e gomuks(matrix)
 apt install gajim
 apt install revolt
 apt install pidgin
-apt install gomuks
+https://github.com/tulir/gomuks/releases
+apt install ./gomuks-version-amd64.deb
