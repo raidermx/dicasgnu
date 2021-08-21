@@ -5,8 +5,8 @@ apropos pacote
 aptitude search pacote | less
 man pacote - manual do pacote
 
-sudo apt install cpu-x cups vim vim-gtk3 aptitude neofetch cmatrix aria2 tmux tmate ncal ccal gcal calendar calc  links2 debsums deborphan htop hdparm vim timeshift akira gimp inkscape blender scribus krita kodi vlc flameshot darktable digikam mypaint kolourpaint rawtherapee librecad freecad leocad solvespace synfigstudio tupi openscad pencil2d octave scilab kruler ardour audacious kdenlive lmms mixxx musescore clementine shotcut ark  filezilla qbittorrent uget youtube-dl tlp tlp-rdw okular cheese guvcview handbrake hydrogen mpv pitivi qtractor smplayer k3b brasero bluefish codeblocks emacs geany jedit minder scratch carmetal geogebra kicad electric stellarium tuxmath gnucash gnumeric calibre planner dia gedit cherrytree seahorse keepassxc focuswriter gnome-calculator thunderbird pidgin obs-studio apt-listbugs gpm rygel rygel-preferences psensor vrms inxi hardinfo gparted grub-customizer tilix gnuplot ifenslave gnome-system-tools openvpn network-manager-openvpn-gnome gnome-disk-utility gnome-usage  baobab shotwell mangohud arch-install-scripts pdfarranger ristretto fonts-liberation firefox-esr evince xournal openshot gajim revolt ratbagd piper games-chess isomaster qgis abiword qpdf btrfs-progs xfsprogs exfatprogs
-
+sudo apt install cpu-x cups vim vim-gtk3 aptitude neofetch cmatrix aria2 tmux tmate ncal ccal gcal calendar calc  links2 debsums deborphan htop hdparm vim timeshift akira gimp inkscape blender scribus krita kodi vlc flameshot darktable digikam mypaint kolourpaint rawtherapee librecad freecad leocad solvespace synfigstudio tupi openscad pencil2d octave scilab kruler ardour audacity audacious kdenlive lmms mixxx musescore clementine shotcut ark  filezilla qbittorrent uget youtube-dl tlp tlp-rdw okular cheese guvcview handbrake hydrogen mpv pitivi qtractor smplayer k3b brasero bluefish codeblocks emacs geany jedit minder scratch carmetal geogebra kicad electric stellarium tuxmath gnucash gnumeric calibre planner dia gedit cherrytree seahorse keepassxc focuswriter gnome-calculator thunderbird pidgin obs-studio apt-listbugs gpm rygel rygel-preferences psensor vrms inxi hardinfo gparted grub-customizer tilix gnuplot ifenslave gnome-system-tools openvpn network-manager-openvpn-gnome gnome-disk-utility gnome-usage  baobab shotwell mangohud arch-install-scripts pdfarranger ristretto fonts-liberation firefox-esr evince xournal openshot gajim revolt ratbagd piper games-chess kpat isomaster qgis abiword qpdf btrfs-progs xfsprogs exfatprogs 
+apt install nautilus*
 
 super pack do professor livre
 
@@ -99,3 +99,183 @@ apt install ./gomuks-version-amd64.deb
 jogos de xadrez
 apt install games-chess
 chessgames.com
+
+
+pacote de desenvolvimento
+sudo apt install git gnome-tweak-tool fonts-hack-ttf ttf-mscorefonts-installer
+
+sudo apt install build-essential default-jdk libssl-dev exuberant-ctags ncurses-term ack-grep silversearcher-ag fontconfig imagemagick libmagickwand-dev software-properties-common git vim-gtk3 curl
+
+sudo apt install build-essential autoconf m4 libncurses5-dev libwxgtk3.0-gtk3-dev libgl1-mesa-dev libglu1-mesa-dev libpng-dev libssh-dev unixodbc-dev xsltproc fop libxml2-utils libncurses-dev openjdk-11-jdk
+
+asdf - gerenciador de versões de linguagens de progamação
+git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.8.1
+
+echo -e '\n. $HOME/.asdf/asdf.sh' >> ~/.bashrc
+echo -e '\n. $HOME/.asdf/completions/asdf.bash' >> ~/.bashrc
+
+asdf plugin-update --all # update the individual plugins
+asdf list-all [language] # to list all available versions
+
+asdf plugin-add clojure https://github.com/vic/asdf-clojure.git
+asdf plugin-add elixir https://github.com/asdf-vm/asdf-elixir.git
+asdf plugin-add erlang https://github.com/asdf-vm/asdf-erlang.git
+asdf plugin-add golang https://github.com/kennyp/asdf-golang.git
+asdf plugin-add ruby https://github.com/asdf-vm/asdf-ruby.git
+asdf plugin-add rust https://github.com/code-lever/asdf-rust.git
+asdf plugin-add nodejs https://github.com/asdf-vm/asdf-nodejs.git
+
+
+
+asdf install clojure 1.8.0
+asdf global clojure 1.8.0
+mkdir ~/bin
+wget https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein -O ~/bin/lein
+chmod +x ~/bin/lein
+export PATH=$PATH:~/bin
+# echo "PATH=$PATH" > ~/.zsh.after/binpath.zsh # if you use YADR+ZSH
+lein
+
+asdf install erlang 19.0
+asdf global erlang 19.0
+
+asdf install elixir 1.4.0
+asdf global elixir 1.4.0
+mix local.hex
+mix local.rebar
+
+asdf install golang 1.7.4
+asdf global golang 1.7.4
+
+asdf install ruby 2.4.0
+asdf global ruby 2.4.0
+gem install bundler
+
+asdf install rust 1.14.0
+asdf global rust 1.14.0
+
+asdf install nodejs 7.4.0
+asdf global nodejs 7.4.0
+npm -g install brunch phantomjs
+
+
+
+banco de dados:
+postgresql
+sudo apt install postgresql 
+
+redis
+sudo apt install redis-server libhiredis-dev 
+
+memcached
+apt install memcached libmemcached-dev
+
+mongodb
+wget -qO - https://www.mongodb.org/static/pgp/server-5.0.asc | sudo apt-key add -
+echo "deb http://repo.mongodb.org/apt/debian buster/mongodb-org/5.0 main" | sudo tee /etc/apt/sources.list.d/mongodb-org-5.0.list
+sudo apt-get update
+sudo apt-get install -y mongodb-org
+
+virtualização
+sudo apt install virt-manager
+sudo adduser $USER libvirt
+
+conteiners
+
+Docker
+apt install docker.io
+
+criar chave privada
+ssh-keygen -o -a 100 -t ed25519 -f ~/.ssh/id_ed25519 -C "boss@akitaonrails.com"
+
+adicionar chave no agente ssh
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_ed25519
+
+kernels otimizados:
+
+Liquorix
+curl 'https://liquorix.net/add-liquorix-repo.sh' | sudo bash
+sudo apt-get install linux-image-liquorix-amd64 linux-headers-liquorix-amd64
+
+Xanmod
+echo 'deb http://deb.xanmod.org releases main' | sudo tee /etc/apt/sources.list.d/xanmod-kernel.list
+wget -qO - https://dl.xanmod.org/gpg.key | sudo apt-key --keyring /etc/apt/trusted.gpg.d/xanmod-kernel.gpg add -
+sudo apt update && sudo apt install linux-xanmod
+
+Cola Faxina no Debian
+Atualização
+apt update
+apt upgrade
+apt full-upgrade
+Autoremove
+apt autoremove
+Pacotes órfãos
+apt install deborphan
+
+deborphan
+deborphan --guess-all
+deborphan -a
+Integridade dos pacotes
+apt install debsums
+
+debsums -a 1>log 2>erros
+
+cat erros
+apt reinstall pacote
+
+grep -v OK log
+
+- arquivos alterados
+- arquivos faltando
+
+
+apt reinstall -o Dpkg::Options::=--force-confmiss pacote
+Pacotes de fora do Debian
+aptitude search '~S~i!~Odebian'
+apt list '~i!~Odebian'
+
+vrms
+apt list '~i~snon-free'
+apt list --installed non-free
+Kernel antigos
+dpkg -l | grep linux-image
+dpkg -l | grep linux-headers
+
+apt purge linux-image-5.9.0-3-amd64
+
+ls /lib/modules
+Xserver-xorg outras placas
+dpkg -l | grep xserver-xorg-video
+
+apt purge xserver-xorg-video-nouveau
+Cache de pacotes
+ls -l /var/cache/apt/archives/
+apt clean
+
+rm /var/cache/apt/archives/*deb
+apt install pacote -d
+Logs antigos
+cd /var/log/
+
+find | grep gz$|xargs rm
+find | grep 1$|xargs rm
+find | grep old$|xargs rm
+Backups antigos
+cd /var/backups
+
+arquivos gz
+Dados do usuário
+Cache
+
+~/.cache
+
+Arquivos de configuração
+
+~/. ~/.config
+
+
+
+
+
+
