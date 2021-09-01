@@ -18,11 +18,32 @@ amd64-microcode
 firmware-amd-graphics
 firmware-misc-nonfree
 firmware-linux-nonfree
-sudo apt install cpu-x cups vim vim-gtk3 aptitude neofetch cmatrix aria2 tmux tmate ncal ccal gcal calendar calc  links2 debsums deborphan htop hdparm vim timeshift gimp inkscape blender scribus pinta krita kodi vlc flameshot darktable digikam mypaint kolourpaint rawtherapee librecad freecad leocad solvespace synfigstudio tupi openscad pencil2d octave scilab kruler ardour audacity audacious kdenlive lmms mixxx musescore clementine shotcut ark  filezilla qbittorrent uget youtube-dl tlp tlp-rdw okular cheese guvcview handbrake hydrogen mpv pitivi qtractor smplayer k3b brasero bluefish codeblocks emacs geany jedit minder scratch carmetal geogebra kicad electric stellarium tuxmath gnucash gnumeric calibre planner dia gedit cherrytree seahorse keepassxc focuswriter gnome-calculator thunderbird pidgin obs-studio apt-listbugs gpm rygel rygel-preferences psensor smartmontools vrms inxi hardinfo gparted grub-customizer tilix gnuplot ifenslave gnome-system-tools openvpn network-manager-openvpn-gnome gnome-disk-utility gnome-usage  baobab shotwell mangohud arch-install-scripts pdfarranger ristretto fonts-liberation firefox-esr evince xournal openshot gajim revolt ratbagd piper games-chess kpat isomaster qgis abiword qpdf btrfs-progs xfsprogs exfatprogs lazarus mc 
+sudo apt install caja cpu-x cups vim vim-gtk3 aptitude neofetch cmatrix aria2 tmux tmate ncal ccal gcal calendar calc  links2 debsums deborphan htop hdparm vim timeshift gimp inkscape blender scribus pinta krita kodi vlc flameshot darktable digikam mypaint kolourpaint rawtherapee librecad freecad leocad solvespace synfigstudio tupi openscad pencil2d octave scilab kruler ardour audacity audacious kdenlive lmms mixxx musescore clementine shotcut ark  filezilla qbittorrent uget youtube-dl tlp tlp-rdw okular cheese guvcview handbrake hydrogen mpv pitivi qtractor smplayer k3b brasero bluefish codeblocks emacs geany jedit minder scratch carmetal geogebra kicad electric stellarium tuxmath gnucash gnumeric calibre planner dia gedit cherrytree seahorse keepassxc focuswriter gnome-calculator thunderbird pidgin obs-studio apt-listbugs gpm rygel rygel-preferences psensor smartmontools vrms inxi hardinfo gparted grub-customizer tilix gnuplot ifenslave gnome-system-tools openvpn network-manager-openvpn-gnome gnome-disk-utility gnome-usage  baobab shotwell mangohud arch-install-scripts pdfarranger ristretto fonts-liberation firefox-esr evince xournal openshot gajim revolt ratbagd piper games-chess kpat isomaster qgis abiword qpdf btrfs-progs xfsprogs exfatprogs lazarus mc 
 
 apt install nautilus*
 
 sudo apt install materia-gtk-theme deepin-icon-theme
+
+Completing the Installed System
+Depending on how the installation was performed, it might be that the need for some firmware was not detected during installation, that the relevant firmware was not available, or that one chose not to install some firmware at that time. In some cases, a successful installation can still end up in a black screen or a garbled display when rebooting into the installed system. When that happens, the following workarounds can be tried:
+
+Pass the nomodeset option on the kernel command line. This might help boot into a “fallback graphics” mode.
+
+Use the Ctrl+Alt+F2 key combination to switch to VT2, which might offer a functional login prompt..
+
+Once logged in into the installed system, it is possible to automate the detection of missing firmware, and to perform the required steps to enable them following this procedure:
+
+Install the isenkram-cli package
+
+Run the isenkram-autoinstall-firmware command as the “root” user.
+
+Usually, rebooting is the simplest way to make sure all kernel modules are properly initialized; that's particularly important when one has booted the system with the nomodeset option as an interim measure.
+
+[Nota]	Nota
+Installing firmware packages is very likely to require enabling the non-free section of the package archive. As of Debian GNU/Linux 11.0, running the isenkram-autoinstall-firmware command will do that automatically by creating a dedicated file (/etc/apt/sources.list.d/isenkram-autoinstall-firmware.list), pointing at a generic mirror.
+
+
+
 
 zotero
 wget -qO- https://github.com/retorquere/zotero-deb/releases/download/apt-get/install.sh | sudo bash
