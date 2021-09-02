@@ -1,4 +1,4 @@
-pacotes essencias GNU/Linux
+pacotes essenciais GNU/Linux
 
 apt list | grep pacote - pesquisar por pacote
 apt show pacote - descrição do pacote
@@ -378,9 +378,20 @@ adicionar chave no agente ssh
 eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_ed25519
 
-
-
-
+documentação:
+https://www.debian.org/doc/index.pt.html
+https://www.kali.org/docs/
+https://www.guiafoca.org/
+https://wiki.parabola.nu/Parabola_Presentation_(Português)
+https://wiki.archlinux.org/title/Main_page_(Português)
+https://docs.slackware.com/pt-br:start
+http://wiki.ubuntu-br.org/Documentacao
+https://wiki.gentoo.org/wiki/Handbook:Main_Page/pt-br
+https://access.redhat.com/documentation/pt-br/red_hat_enterprise_linux/8
+https://linuxmint-installation-guide.readthedocs.io/pt_BR/latest/
+https://support.system76.com/
+https://fedoraproject.org/wiki/Pt_BR/Docs
+https://doc.opensuse.org/pt-BR/
 
 
 
