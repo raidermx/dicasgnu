@@ -18,7 +18,9 @@ sudo apt install caja cpu-x cups vim vim-gtk3 aptitude neofetch cmatrix aria2 tm
 
 apt install nautilus*
 
+TEMAS:
 sudo apt install materia-gtk-theme deepin-icon-theme paper-icon-theme adapta-gtk-theme
+https://github.com/daniruiz/flat-remix
 
 DRIVERS:
 Completing the Installed System
