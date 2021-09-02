@@ -313,26 +313,26 @@ export PATH=$PATH:~/bin
 # echo "PATH=$PATH" > ~/.zsh.after/binpath.zsh # if you use YADR+ZSH
 lein
 
-asdf install erlang 19.0
-asdf global erlang 19.0
+asdf install erlang 24.0.5
+asdf global erlang 24.0.5
 
-asdf install elixir 1.4.0
-asdf global elixir 1.4.0
+asdf install elixir 1.12.2
+asdf global elixir 1.12.2
 mix local.hex
 mix local.rebar
 
-asdf install golang 1.7.4
-asdf global golang 1.7.4
+asdf install golang 1.17
+asdf global golang 1.17
 
-asdf install ruby 2.4.0
-asdf global ruby 2.4.0
+asdf install ruby 3.0.2
+asdf global ruby 3.0.2
 gem install bundler
 
-asdf install rust 1.14.0
-asdf global rust 1.14.0
+asdf install rust 1.54.0
+asdf global rust 1.54.0
 
-asdf install nodejs 7.4.0
-asdf global nodejs 7.4.0
+asdf install nodejs 16.8.0
+asdf global nodejs 16.8.0
 npm -g install brunch phantomjs
 
 
