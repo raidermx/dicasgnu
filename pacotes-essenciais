@@ -381,6 +381,20 @@ adicionar chave no agente ssh
 eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_ed25519
 
+pacotes de software:
+https://www.appimagehub.com/
+https://flathub.org/
+https://snapcraft.io/
+
+discovery
+sudo apt install plasma-discover plasma-discover-backend-flatpak plasma-discover-backend-snap
+
+gnome control center
+sudo apt install gnome-control-center
+
+outlet
+https://github.com/app-outlet/app-outlet/releases/
+
 documentação:
 https://www.debian.org/doc/index.pt.html
 https://www.kali.org/docs/
