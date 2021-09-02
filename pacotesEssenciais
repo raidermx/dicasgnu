@@ -4,7 +4,12 @@ apt show pacote - descrição do pacote
 apropos pacote
 aptitude search pacote | less
 man pacote - manual do pacote
+apt install vim
+apt install aria2
+aria2c linkdodownload
 
+SOURCE LIST:
+deb http://deb.debian.org/debian/ sid main contrib non-free
 
 
 PACOTES:
@@ -34,7 +39,7 @@ Usually, rebooting is the simplest way to make sure all kernel modules are prope
 [Nota]	Nota
 Installing firmware packages is very likely to require enabling the non-free section of the package archive. As of Debian GNU/Linux 11.0, running the isenkram-autoinstall-firmware command will do that automatically by creating a dedicated file (/etc/apt/sources.list.d/isenkram-autoinstall-firmware.list), pointing at a generic mirror.
 
-firmwares
+FIRMWARES REDE E PROCESSADORES:
 firmware-iwlwifi
 firmware-atheros
 firmware-ath9k-htc
@@ -48,7 +53,26 @@ firmware-amd-graphics
 firmware-misc-nonfree
 firmware-linux-nonfree
 
-kernels otimizados:
+NVIDIA
+apt install nvidia-detect
+apt install nvidia-driver
+ou
+download nvidia.com
+systemctl isolate multiuser.target
+acessar pasta de download
+chmod +x nvidiar.run
+./nvidia.run
+
+BLUETOOTH:
+sudo apt update
+sudo apt upgrade
+sudo apt-get install bluetooth bluez bluez-tools rfkill -y
+sudo rfkill list
+sudo rfkill unblock bluetooth
+sudo service bluetooth start
+sudo apt-get install blueman -y && blueman-manager
+
+KERNELS OTIMIZADOS:
 
 Liquorix
 curl 'https://liquorix.net/add-liquorix-repo.sh' | sudo bash
