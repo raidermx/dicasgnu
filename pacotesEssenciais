@@ -48,6 +48,89 @@ firmware-amd-graphics
 firmware-misc-nonfree
 firmware-linux-nonfree
 
+kernels otimizados:
+
+Liquorix
+curl 'https://liquorix.net/add-liquorix-repo.sh' | sudo bash
+sudo apt-get install linux-image-liquorix-amd64 linux-headers-liquorix-amd64
+
+Xanmod
+echo 'deb http://deb.xanmod.org releases main' | sudo tee /etc/apt/sources.list.d/xanmod-kernel.list
+wget -qO - https://dl.xanmod.org/gpg.key | sudo apt-key --keyring /etc/apt/trusted.gpg.d/xanmod-kernel.gpg add -
+sudo apt update && sudo apt install linux-xanmod
+
+Cola Faxina no Debian
+Atualização
+apt update
+apt upgrade
+apt full-upgrade
+Autoremove
+apt autoremove
+Pacotes órfãos
+apt install deborphan
+
+deborphan
+deborphan --guess-all
+deborphan -a
+Integridade dos pacotes
+apt install debsums
+
+debsums -a 1>log 2>erros
+
+cat erros
+apt reinstall pacote
+
+grep -v OK log
+
+- arquivos alterados
+- arquivos faltando
+
+
+apt reinstall -o Dpkg::Options::=--force-confmiss pacote
+Pacotes de fora do Debian
+aptitude search '~S~i!~Odebian'
+apt list '~i!~Odebian'
+
+vrms
+apt list '~i~snon-free'
+apt list --installed non-free
+Kernel antigos
+dpkg -l | grep linux-image
+dpkg -l | grep linux-headers
+
+apt purge linux-image-5.9.0-3-amd64
+
+ls /lib/modules
+Xserver-xorg outras placas
+dpkg -l | grep xserver-xorg-video
+
+apt purge xserver-xorg-video-nouveau
+Cache de pacotes
+ls -l /var/cache/apt/archives/
+apt clean
+
+rm /var/cache/apt/archives/*deb
+apt install pacote -d
+Logs antigos
+cd /var/log/
+
+find | grep gz$|xargs rm
+find | grep 1$|xargs rm
+find | grep old$|xargs rm
+Backups antigos
+cd /var/backups
+
+arquivos gz
+Dados do usuário
+Cache
+
+~/.cache
+
+Arquivos de configuração
+
+~/. ~/.config
+
+
 BLIBIOTECA:
 
 LibraryThing
@@ -257,87 +340,6 @@ adicionar chave no agente ssh
 eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_ed25519
 
-kernels otimizados:
-
-Liquorix
-curl 'https://liquorix.net/add-liquorix-repo.sh' | sudo bash
-sudo apt-get install linux-image-liquorix-amd64 linux-headers-liquorix-amd64
-
-Xanmod
-echo 'deb http://deb.xanmod.org releases main' | sudo tee /etc/apt/sources.list.d/xanmod-kernel.list
-wget -qO - https://dl.xanmod.org/gpg.key | sudo apt-key --keyring /etc/apt/trusted.gpg.d/xanmod-kernel.gpg add -
-sudo apt update && sudo apt install linux-xanmod
-
-Cola Faxina no Debian
-Atualização
-apt update
-apt upgrade
-apt full-upgrade
-Autoremove
-apt autoremove
-Pacotes órfãos
-apt install deborphan
-
-deborphan
-deborphan --guess-all
-deborphan -a
-Integridade dos pacotes
-apt install debsums
-
-debsums -a 1>log 2>erros
-
-cat erros
-apt reinstall pacote
-
-grep -v OK log
-
-- arquivos alterados
-- arquivos faltando
-
-
-apt reinstall -o Dpkg::Options::=--force-confmiss pacote
-Pacotes de fora do Debian
-aptitude search '~S~i!~Odebian'
-apt list '~i!~Odebian'
-
-vrms
-apt list '~i~snon-free'
-apt list --installed non-free
-Kernel antigos
-dpkg -l | grep linux-image
-dpkg -l | grep linux-headers
-
-apt purge linux-image-5.9.0-3-amd64
-
-ls /lib/modules
-Xserver-xorg outras placas
-dpkg -l | grep xserver-xorg-video
-
-apt purge xserver-xorg-video-nouveau
-Cache de pacotes
-ls -l /var/cache/apt/archives/
-apt clean
-
-rm /var/cache/apt/archives/*deb
-apt install pacote -d
-Logs antigos
-cd /var/log/
-
-find | grep gz$|xargs rm
-find | grep 1$|xargs rm
-find | grep old$|xargs rm
-Backups antigos
-cd /var/backups
-
-arquivos gz
-Dados do usuário
-Cache
-
-~/.cache
-
-Arquivos de configuração
-
-~/. ~/.config
 
 
 
