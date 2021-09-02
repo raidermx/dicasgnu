@@ -23,6 +23,9 @@ TEMAS:
 sudo apt install materia-gtk-theme deepin-icon-theme paper-icon-theme adapta-gtk-theme
 https://github.com/daniruiz/flat-remix
 
+Libreoffice
+apt install libreoffice-style-breeze libreoffice-style-colibre libreoffice-style-elementary libreoffice-style-galaxy libreoffice-style-hicontrast libreoffice-style-sifr libreoffice-style-tango
+
 DRIVERS:
 Completing the Installed System
 Depending on how the installation was performed, it might be that the need for some firmware was not detected during installation, that the relevant firmware was not available, or that one chose not to install some firmware at that time. In some cases, a successful installation can still end up in a black screen or a garbled display when rebooting into the installed system. When that happens, the following workarounds can be tried:
