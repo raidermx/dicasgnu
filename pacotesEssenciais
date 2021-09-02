@@ -59,6 +59,9 @@ echo 'deb http://deb.xanmod.org releases main' | sudo tee /etc/apt/sources.list.
 wget -qO - https://dl.xanmod.org/gpg.key | sudo apt-key --keyring /etc/apt/trusted.gpg.d/xanmod-kernel.gpg add -
 sudo apt update && sudo apt install linux-xanmod
 
+echo 'net.core.default_qdisc = fq_pie' | sudo tee /etc/sysctl.d/90-override.conf
+
+
 Cola Faxina no Debian
 Atualização
 apt update
