@@ -19,4 +19,5 @@ integrando i3wm com rofi
 
 vim ~/.config/i3/config
 alterar linha:
-bindsym $super+d exec rofi  -show drun
+bindsym $mod+c exec rofi  -show drun
+bindsym $mod+x exec caja
