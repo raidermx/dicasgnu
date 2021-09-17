@@ -60,6 +60,8 @@ firmware-misc-nonfree
 firmware-linux-nonfree
 
 NVIDIA
+nouveau
+ou
 apt install nvidia-detect
 apt install nvidia-driver
 ou
@@ -91,6 +93,16 @@ sudo apt update && sudo apt install linux-xanmod
 
 echo 'net.core.default_qdisc = fq_pie' | sudo tee /etc/sysctl.d/90-override.conf
 
+
+INTERFACES GRÁFICAS
+MATE
+apt install mate-desktop-environment lightdm
+XFCE
+apt install xfce4 lightdm
+ICEWM
+apt install icewm lightdm
+I3
+apt install i3 i3blocks webcamoid compton redshift feh mplayer galculator xbacklight transmission-gtk
 
 Cola Faxina no Debian
 Atualização
