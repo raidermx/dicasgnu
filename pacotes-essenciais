@@ -72,6 +72,7 @@ systemctl isolate multiuser.target
 acessar pasta de download
 chmod +x nvidiar.run
 ./nvidia.run
+systemctl isolate graphical.target
 
 BLUETOOTH:
 sudo apt update
