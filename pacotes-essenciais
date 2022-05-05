@@ -238,8 +238,16 @@ apt install ristretto
 
 gimp - editor de imagens
 editar imagem e exportar
-
 apt install gimp
+
+inkscape - desenho vetorial
+apt install inkscape
+
+librecad - desenho parametrizado 2D
+apt install librecad
+
+freecad - desenho parametrizado 3D
+apt install freecad
 
 libreoffice impress - slides
 libreoffice calc - planilhas
@@ -299,14 +307,27 @@ chessgames.com
 
 DESENVOLVIMENTO:
 
-sudo apt install git gnome-tweak-tool fonts-hack-ttf ttf-mscorefonts-installer
+
+aparencia
+sudo apt install git gnome-tweak-tool fonts-hack-ttf 
+
+fontes proprietárias arial,times new roman e etc.
+ttf-mscorefonts-installer
+
+pacotes essenciais para programar:
 
 sudo apt install build-essential default-jdk libssl-dev exuberant-ctags ncurses-term ack-grep silversearcher-ag fontconfig imagemagick libmagickwand-dev software-properties-common git vim-gtk3 curl
 
 sudo apt install build-essential autoconf m4 libncurses5-dev libwxgtk3.0-gtk3-dev libgl1-mesa-dev libglu1-mesa-dev libpng-dev libssh-dev unixodbc-dev xsltproc fop libxml2-utils libncurses-dev openjdk-11-jdk
 
+delphi
+apt install lazarus
+
+
+todas as linguagens:
+
 asdf - gerenciador de versões de linguagens de progamação
-git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.8.1
+git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.10.0
 
 echo -e '\n. $HOME/.asdf/asdf.sh' >> ~/.bashrc
 echo -e '\n. $HOME/.asdf/completions/asdf.bash' >> ~/.bashrc
