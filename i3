@@ -1,6 +1,12 @@
 instalando o i3 no debian
 
-sudo apt install i3 dmenu i3status feh
+instalar o debian com expert install
+desmarcar todas as opções do tasksel
+
+sudo apt install i3 i3blocks xorg suckless-tools dmenu rofi webcamoid compton redshift feh mplayer galculator xbacklight transmission-gtk firefox-esr-l10n-pt-br evince tmux vrms ncal vim mcedit 
+sudo apt install caja*
+sudo apt install lightdm
+sudo reboot
 
 Agora temos que aprender algumas teclas para aprendermos a sobreviver dentro do I3wm.
 
