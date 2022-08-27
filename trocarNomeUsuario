@@ -1,0 +1,11 @@
+Vamos supor que você queira trocar o login franciscojose para fjose.
+É necessário usar o comando usermod, com privilégios administrativos. Este comando pode alterar o conteúdo dos arquivos 
+referentes a uma conta — inclusive o /etc/passwd.
+A sintaxe do usermod, para alterar um nome de login é usermod -l {login-novo} {login-atual}.
+Veja como fica:
+
+sudo usermod -l fjose franciscojose
+id fjose
+
+É possível alterar o nome do grupo com o comando groupmod -n {novo-nome} {antigo-nome} — se houver outros arquivos e 
+diretórios registrados neste grupo no sistema (provavelmente há) eles terão que ser alterados manualmente.
