@@ -1,0 +1,93 @@
+https://www.linuxdescomplicado.com.br/2017/05/10-ferramentas-linux-uteis-para-recuperacao-e-diagnostico-de-problemas-do-computador.html
+
+https://www.knopper.net/knoppix/index-en.html
+knnopix distro live para diagnosticar problemas de hardware.
+
+https://www.gnu.org/software/ddrescue/
+ddrescue
+GNU ddrescue é uma ferramenta de recuperação de dados com a qual você pode fazer backup de dados em vários tipos de unidades de armazenamento. Ele copia dados de um arquivo ou dispositivo de bloco (disco rígido, partição, etc.) para outro, tentando resgatar as partes “boas” primeiro, caso tenha erros de leitura. Muito útil para recuperar arquivos em discos com ‘bad blocks’ encontrados.
+A operação do ddrescue é totalmente automática. Ou seja, você não precisa esperar por um erro, interromper o programa, reiniciá-lo a partir de uma nova posição, por exemplo. O ddrescue não grava zeros quando encontra setores defeituosos na mídia de origem e não trunca o arquivo de saída se não for solicitado. Assim, toda vez que você executá-lo no mesmo dispositivo, ele tenta preencher as lacunas sem apagar os dados já resgatados 😉
+
+https://www.cgsecurity.org/wiki/TestDisk_Download
+O TestDisk é boa ferramenta para recuperar partições danificadas, ou apagadas. É bastante comum o caso de partições que por algum motivo entraram no formato RAW, deixando os dados inacessíveis. O TestDisk é capaz de recuperar essa partição, com toda a estrutura de pastas e arquivos. Também funciona muito bem caso por acidente ou não uma partição tenha sido apagada.
+
+https://archiveos.org/deft/
+deft linux
+DEFT Linux, distribuição Linux, criada na Itália, tem como objetivo auxiliar investigadores, policiais, administradores de sistemas ou qualquer pessoa que deseja realizar uma análise forense em um computador, seja ele Linux ou Windows. Em resumo, essa distribuição permite descobrir o que houve em determinado incidente computacional; através da análise dos rastros deixados (forense). Além disso, é possível realizar a recuperação de arquivos removidos acidentalmente, com o dd_rescue e photorec; ferramentas previamente instaladas.
+
+https://www.hirensbootcd.org/download/
+hiren's boot cd 
+Hiren’s Boot CD é livre para usar e pode ser baixado como um ISO para a instalação em mídia USB ou CD. Ele inicia em um ambiente baseado em Linux, o MiniXP, onde você pode limpar o CMOS do seu sistema, fazer a varredura de problemas de hardware, fazer backup de seus dados em outra unidade e recuperar senhas, entre muitas outras tarefas.
+
+https://www.system-rescue.org/Download/
+SystemRescue CD é um sistema Linux que roda em um CD-ROM ou um PenDrive, projetado para reparar um sistema e dados após uma falha. Ele também tem como objetivo fornecer uma maneira fácil de realizar tarefas de administração em um computador, como a criação e edição de partições do disco rígido. Ele contém muitos utilitários úteis do sistema (GNU parted, partimage, FSTools) e algumas básicas (editores, Midnight Commander, ferramentas de rede).
+
+https://www.ultimatebootcd.com/download.html
+Ultimate Boot CD é um CD inicializável composto de imagens de disco inicializáveis, cada uma contendo uma variedade única de ferramentas de administração do sistema e interfaces para permitir operações diferentes em seu sistema, incluindo clonagem de unidade, recuperação do sistema, CPU e testes de memória, gerenciamento de BIOS, etc.
+
+http://mondo.mirror.pclark.com/
+O Mondo Rescue é uma solução de recuperação de desastres para, praticamente, todas as distro Linux com as quais você pode fazer backup de dados do sistema usando fitas, rede, discos e CD/DVD. Tem suporte para BIOS e UEFI, LVM. Vários sistemas de arquivos, software e hardware Raid. É licenciado sob a GPL.
+
+https://gparted.org/download.php
+GParted para lidar com tarefas de particionamento com facilidade. Uma extensa coleção de ferramentas de sistema de arquivos também estão incluídos. Ele suporta os seguintes sistemas de arquivos: btrfs, ext2, ext3, ext4, fat16, fat32, hfs, hfs +, jfs, linux-swap, ntfs, reiserfs, reiser4, e xfs.
+
+http://redorescue.com/
+erramenta para recuperação de sistema simples de usar e com interface gráfica disponível (GUI). Juntamente com a capacidade de clonar partições de disco (usando o Partclone) ele possui um editor de texto, navegador da Web, terminal e um gerenciador de arquivos. Ele também tem a capacidade de recuperar arquivos excluídos, bem como restaurar um sistema padrão.
+
+https://www.macrium.com/reflectfree
+he free version of Macrium Reflect supports many features that even some commercial solutions lack, including incremental backups, backup scheduling with flexible templates, and the ability to boot your backups instantly in a virtual machine. The last feature mentioned is especially useful for restoring non-booting systems that have suffered a critical data loss due to hardware failure or user error.
+
+https://www.acronis.com/en-us/products/true-image/
+Protection against ransomware is one of the most common reasons why Windows and Mac users back up their data. 
+
+https://www.aomeitech.com/ab/standard.html
+ferramenta de backup para windows.
+
+http://www.amanda.org/
+AMANDA, the Advanced Maryland Automatic Network Disk Archiver, is a backup solution that allows the IT administrator to set up a single master backup server to back up multiple hosts over network to tape drives/changers or disks or optical media. Amanda uses native utilities and formats (e.g. dump and/or GNU tar) and can back up a large number of servers and workstations running multiple versions of Linux or Unix. Amanda uses a native Windows client to back up Microsoft Windows desktops and servers.
+
+https://clonezilla.org/downloads.php
+Clonezilla is a partition and disk imaging/cloning program similar to True Image® or Norton Ghost®. It helps you to do system deployment, bare metal backup and recovery. Three types of Clonezilla are available, Clonezilla live, Clonezilla lite server, and Clonezilla SE (server edition). Clonezilla live is suitable for single machine backup and restore. While Clonezilla lite server or SE is for massive deployment, it can clone many (40 plus!) computers simultaneously. Clonezilla saves and restores only used blocks in the hard disk. This increases the clone efficiency. With some high-end hardware in a 42-node cluster, a multicast restoring at rate 8 GB/min was reported.
+Features:
+
+    Many File systems are supported: (1) ext2, ext3, ext4, reiserfs, reiser4, xfs, jfs, btrfs, f2fs and nilfs2 of GNU/Linux, (2) FAT12, FAT16, FAT32, exFAT and NTFS of MS Windows, (3) HFS+ and APFS of Mac OS, (4) UFS of FreeBSD, NetBSD, and OpenBSD, (5) minix of Minix, and (6) VMFS3 and VMFS5 of VMWare ESX. Therefore you can clone GNU/Linux, MS windows, Intel-based Mac OS, FreeBSD, NetBSD, OpenBSD, Minix, VMWare ESX and Chrome OS/Chromium OS, no matter it's 32-bit (x86) or 64-bit (x86-64) OS. For these file systems, only used blocks in partition are saved and restored by Partclone. For unsupported file system, sector-to-sector copy is done by dd in Clonezilla.
+    LVM2 (LVM version 1 is not) under GNU/Linux is supported.
+    LUKS (Linux Unified Key Setup) is supported.
+    Boot loader, including grub (version 1 and version 2) and syslinux, could be reinstalled.
+    Both MBR and GPT partition formats of hard drive are supported. Clonezilla live also can be booted on a BIOS or uEFI machine.
+    Unattended mode is supported. Almost all steps can be done via commands and options. You can also use a lot of boot parameters to customize your own imaging and cloning.
+    One image restoring to multiple local devices is supported.
+    Image could be encrypted. This is done with ecryptfs, a POSIX-compliant enterprise cryptographic stacked filesystem.
+    Multicast is supported in Clonezilla SE, which is suitable for massive clone. You can also remotely use it to save or restore a bunch of computers if PXE and Wake-on-LAN are supported in your clients.
+    Bittorrent (BT) is supported in Clonezilla lite server, which is suitable for massive deployment. The job for BT mode is done by Ezio.
+    The image file can be on local disk, ssh server, samba server, NFS server or WebDAV server.
+    AES-256 encryption could be used to secures data access, storage and transfer.
+    Based on Partclone (default), Partimage (optional), ntfsclone (optional), or dd to image or clone a partition. However, Clonezilla, containing some other programs, can save and restore not only partitions, but also a whole disk.
+    By using another free software drbl-winroll, which is also developed by us, the hostname, group, and SID of cloned MS windows machine can be automatically changed. 
+
+Minimum System Requirements for Clonezilla live:
+
+    X86 or x86-64 processor
+    196 MB of system memory (RAM)
+    Boot device, e.g. CD/DVD Drive, USB port, PXE, or hard drive 
+
+Limitations:
+
+    The destination partition must be equal or larger than the source one.
+    Differential/incremental backup is not implemented yet.
+    Online imaging/cloning is not implemented yet. The partition to be imaged or cloned has to be unmounted.
+    Due to the image format limitation, the image can not be explored or mounted. You can _NOT_ recovery single file from the image. However, you still have workaround to make it, read this.
+    Recovery Clonezilla live with multiple CDs or DVDs is not implemented yet. Now all the files have to be in one CD or DVD if you choose to create the recovery iso file. 
+
+License:
+
+    Clonezilla itself is licensed under the GNU General Public License (GPL) Version 2. However, to run Clonezilla, a lot of free and open source software, e.g. the Linux kernel and a minimal GNU/Linux OS, are required. 
+
+Which Clonezilla Shall I Use ?
+
+    Clonezilla Live: Clonezilla live allows you to use CD/DVD or USB flash drive to boot and run clonezilla (Unicast only)
+    Clonezilla lite server: Clonezilla lite server allows you to use Clonezilla live to do massively cloning (unicast, broadcast, multicast, bittorrent are supported)
+    Clonezilla SE: Clonezilla SE is included in DRBL, therefore a DRBL server must first be set up in order to use Clonezilla to do massively cloning (unicast, broadcast and multicast are supported) 
+    
+https://www.kali.org/get-kali/#kali-installer-images
+Kali is a rolling Linux distribution, meaning as soon as we have an update, we ship it. Would-be users have a variety of images to choose from. For more information, please see Which Image Should I Download? and Kali Branches. For most users, we recommend the latest “point release” image below, except in cases when a user requires a specific bug patch, in which case the weekly build may be best.
