@@ -19,22 +19,18 @@ Passo 1. Instale os pacotes bluetooth bluez bluez-tools rfkill, usando o gerenci
 
 sudo apt-get install bluetooth bluez bluez-tools rfkill -y
 
-Instalando os aplicativos necessários ao funcionamento do Bluetooth — Foto: Edivaldo Brito/TechTudo
-Instalando os aplicativos necessários ao funcionamento do Bluetooth — Foto: Edivaldo Brito/TechTudo
 
 Passo 2. Em seguida, verifique se o seu dispositivo Bluetooth não está bloqueado. Você pode verificar isso usando o utilitário rfkill, conforme mostrado abaixo;
 
 sudo rfkill list
 
-Verificando se o seu dispositivo Bluetooth não está bloqueado — Foto: Edivaldo Brito/TechTudo
-Verificando se o seu dispositivo Bluetooth não está bloqueado — Foto: Edivaldo Brito/TechTudo
+
 
 Passo 3. Se o seu dispositivo Bluetooth estiver bloqueado por algum motivo, você pode desbloqueá-lo usando o mesmo comando rfkill, conforme exibido abaixo;
 
 sudo rfkill unblock bluetooth
 
-Desbloqueando dispositivos Bluetooth  — Foto: Edivaldo Brito/TechTudo
-Desbloqueando dispositivos Bluetooth — Foto: Edivaldo Brito/TechTudo
+
 
 Passo 4. Finalmente, verifique se o serviço Bluetooth está ativo, executando o seguinte comando.
 
@@ -45,38 +41,30 @@ Passo 1. Antes de começar a escanear dispositivos, instale o pacote blueman e e
 
 sudo apt-get install blueman -y && blueman-manager
 
-Instalando e executando o Blueman para usar o Bluetooth — Foto: Edivaldo Brito/TechTudo
-Instalando e executando o Blueman para usar o Bluetooth — Foto: Edivaldo Brito/TechTudo
 
 Passo 2. Por padrão, seu dispositivo Bluetooth está oculto. Você precisa torná-lo visível para que possa ser descoberto por outros dispositivos. Para fazer isso, na tela do Gerenciador de Bluetooth (blueman-manager), clique no menu "Adaptador" e depois na opção "Preferences" (Preferências);
 
-Acessando as configurações do Ggerenciador de Bluetooth — Foto: Edivaldo Brito/TechTudo
-Acessando as configurações do Ggerenciador de Bluetooth — Foto: Edivaldo Brito/TechTudo
 
 Passo 3. Na janela "Adaptadores de Bluetooth", altere a configuração de visibilidade para "Sempre visível" ou "Temporariamente visível", de acordo com a sua necessidade. Se quiser, você também pode definir um nome para o seu dispositivo Bluetooth. Este nome é o que aparecerá para outros dispositivos Bluetooth.
 
-Tornando o PC visível para outros dispositivos Bluetooth — Foto: Edivaldo Brito/TechTudo
-Tornando o PC visível para outros dispositivos Bluetooth — Foto: Edivaldo Brito/TechTudo
 
 Passo 4. Em seguida, comece a escanear os dispositivos Bluetooth clicando em "Pesquisar" e aguarde alguns minutos para que a busca seja concluída. Todos os dispositivos Bluetooth visíveis e detectáveis ​​serão listados no Gerenciador de Bluetooth.
 
-Pesquisando dispositivos Bluetooth — Foto: Edivaldo Brito/TechTudo
-Pesquisando dispositivos Bluetooth — Foto: Edivaldo Brito/TechTudo
 
 Emparelhando e conectando a dispositivos Bluetooth
+
 Agora você deve poder emparelhar e conectar-se aos seus dispositivos Bluetooth, sem complicações. Veja abaixo um exemplo de como se conectar a um dispositivo Android:
 
 Passo 1. Na tela do Gerenciador de Bluetooth, clique com o botão direito do mouse no nome do dispositivo. No menu que será exibido, clique na opção "Emparelhar". Isso inicializará uma solicitação de emparelhamento entre o PC e o outro dispositivo;
 
-Iniciando um emparelhamento — Foto: Edivaldo Brito/TechTudo
 
 Passo 2. Em seguida, insira um código PIN na caixa de diálogo e clique em OK. Um número de quatro dígitos deve ser digitado;
 
-Digitando o PIN para autenticar o emparelhamento no PC — Foto: Edivaldo Brito/TechTudo
+
 
 Passo 3. Finalmente, vá para o seu dispositivo Android e insira o mesmo PIN, para confirmar o emparelhamento.
 
-Digitando o PIN para autenticar o emparelhamento no smartphone — Foto: Edivaldo Brito/TechTudo
+
 
 Se tudo correr bem, os dispositivos serão emparelhados e um novo ícone de bloqueio aparecerá na entrada do dispositivo. No seu dispositivo Android, o seu laptop também deve aparecer na seção "Dispositivos emparelhados".
 
@@ -85,71 +73,12 @@ Para enviar arquivos do PC para o seu smartphone, faça o seguinte:
 
 Passo 1. Abra o Gerenciador de Bluetooth (blueman-manager) e clique com o botão direito do mouse no dispositivo que você quer enviar arquivos. No menu que será exibido, clique em "Enviar um Arquivo...";
 
-Iniciando o envio de um arquivo via Bluetooth — Foto: Edivaldo Brito/TechTudo
+
 
 Passo 2. Na tela que aparece, vá até a pasta e selecione o arquivo que deseja enviar. Finalmente, clique no botão "OK". No smartphone, será exibida uma notificação pedindo que você confirme que deseja receber o arquivo. Confirme e aguarde;
 
-Selecionando o arquivo que será enviado — Foto: Edivaldo Brito/TechTudo
 
 Se quiser, você também pode receber arquivos do seu smartphone de forma semelhante.
 
 Pronto! Agora que está tudo instalado e configurado, você pode usar o Bluetooth do Linux para lidar com aparelhos externos, sem se precoupar outros detalhes dessa tecnologia.
 
-Você usa Linux? Comente suas dicas e dúvidas no Fórum do TechTudo
-
-Saiba Mais
-Como ativar teclado virtual do Ubuntu (Linux)
-Como usar firewall no Linux
-Como criar um pendrive de instalação do Linux no Windows
-COMPUTADORES
- 
-LINUX
- 
-SISTEMAS OPERACIONAIS
-Mais do TechTudo
-NOVIDADE
-Avell lança notebooks Mob de alta performance com até 64 GB e RTX 3080
-
-Há 4 diasNotebooks
-Avell lança notebook com foco em produtividade e bateria de 14 horas
-ANÁLISE
-Notebook Ultra é bom? Veja modelos, ficha técnica e preços no Brasil
-
-Há 6 diasNotebooks
-Notebook Positivo Motion Gray: veja prós e contras do modelo de entrada
-LISTA
-Cinco dicas para evitar problemas na placa-mãe
-
-Há 1 semanaPlacas
-Veja dicas para escolher o modelo certo para PC gamer
-QUAL É MELHOR?
-Ryzen 5 3400G vs Core i5 9400F: compare os processadores AMD e Intel
-
-Há 1 semanaPlacas
-Como escolher o processador ideal? Veja dicas antes de comprar
-Google Pixel 6 vem aí: veja o que se sabe até agora sobre o celular
-Smartphone de grife deve seguir as versões anteriores e ficar de fora do Brasil.
-
-Há 2 horasCelular
-Controle de estoque: quatro aplicativos para ajudar seu negócio
-Programas prometem tornar o armazenamento e o controle de produtos mais fáceis; conheça opções gratuitas e pagas
-
-4 min
-
-OntemDo Zero ao Um
-Core i5 10300H é bom? Tudo sobre o processador 'gamer' para notebook
-Quad-core de 10ª geração da Intel oferece até 4,5 GHz via turbo e aparece em notebooks de várias marcas
-
-2 min
-
-Há 3 diasPlacas
-Visualização única no WhatsApp: o que você deve saber sobre a nova função
-Fotos temporárias têm prazo de validade e não ficam armazenados na galeria do destinatário, mas nada impede que ele tire print da imagem e consiga gravar a foto
-
-2 min
-
-Redes sociais
-VEJA MAIS
-globo.com
-g1globoesportegshowfamosos & etcvídeostodos os sites
-© Copyright 2000-2020 Globo Comunicação e Participações S.A.princípios editoriaispolítica de privacidademinha contaanuncie conosco
