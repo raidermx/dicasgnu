@@ -1,3 +1,3 @@
-wget -c packages.linuxmint.com/pool/main/d/ddm/ddm_1.7.0_all.deb
+wget -ct0 packages.linuxmint.com/pool/main/d/ddm/ddm_1.7.0_all.deb
 sudo dpkg -i ddm_1.7.0_all.deb
 http://packages.linuxmint.com/pool/main/m/mintdrivers/
