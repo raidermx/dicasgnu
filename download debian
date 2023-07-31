@@ -1,5 +1,30 @@
 http://debian.c3sl.ufpr.br/debian-cd/
 
+download direto:
+https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-12.1.0-amd64-netinst.iso
+
+netinst:
+https://www.debian.org/distrib/netinst
+
+obtendo o debian:
+https://www.debian.org/distrib/
+
+espelhos do debian:
+https://deb.debian.org/
+https://www.debian.org/mirror/list
+
+download isos:
+https://www.debian.org/CD/
+
+download live-install:
+https://www.debian.org/CD/live/
+
+lista de todos os pacotes debian:
+https://www.debian.org/distrib/packages
+
+download de pacotes:
+https://pkgs.org/download/dpkg
+
 distros antigas: 
 https://archiveos.org/
 https://sourceforge.net/projects/archiveos/files/
