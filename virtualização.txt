@@ -31,9 +31,9 @@ virsh list --all
 
 lsb_release -all
 
-adduser carlostorres libvirt
-id carlostorres
-newgrp
+adduser usuario libvirt
+id usuario
+newgrp libvirt
 exit
 
 virsh list -all
