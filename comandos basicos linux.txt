@@ -1,19 +1,6 @@
 
-Pular para o conteúdo principal
-Software Livre Brasília-DF
-Minha foto
-
 Henderson Matsuura Sanches
 
-Visitar perfil
-ORCID iD iconorcid.org/0000-0003-2354-3393
-Postagem em destaque
-Como Instalar o LibreOffice 7.1.5 Community
-julho 22, 2021 Como Instalar LibreOffice TDF - The Document Foundation
-0
-Comandos Úteis para o Linux Mint, Ubuntu e Derivados
-novembro 21, 2015
-Alguns dias sugeriram que eu postasse alguns comandos uteis  utilizados no Linux Mint e para o Ubuntu, mas com tantas distros baseadas no Ubuntu esses comandos também podem ser utilizados nas distros como: Ubuntu 15.04, Ubuntu 14.10, Ubuntu 14.04, Linux Mint 17.2, Linux Mint 17.1, Linux Mint 17, Pinguy OS 14.04, Elementary OS 0.3, Deepin 2014, Peppermint Five, LXLE 14.04 and Linux Lite 22, DuZeru, Kaiana e derivados.
 
 Segue alguns comandos importantes para manutenção do sistema, principalmente para usuários iniciantes...
 
@@ -156,53 +143,3 @@ $ sudo shutdown -h +15 (para encerrar o sistema daqui a 15 minutos).
 $ ls -lh /etc/shadow (para saber a data de instalação):
  
 apt-cache polícy [nome do pacote] (para saber se pacote esta disponível para instalação nos repositórios).
-apt-get Dica Dicas DuZeru Kaiana Linux Mint Pesquisa ubuntu
-Comentários
-
-    Silvio Furtado16 de março de 2016 07:44
-
-    Não funcionou nada!
-
-    A mensagem que deu foi:
-    As listas de pacotes ou os arquivos de estado não puderam ser analisados ou abertos.
-    Responder
-    Silvio Furtado16 de março de 2016 07:46
-
-    Meu linux não funciona gerenciador de aplicativos, nao reconhece pen drive e cartão sd, não atualiza programas, nem instala nada!
-    Responder
-        Henderson Matsuura Sanches21 de março de 2016 13:24
-
-        Ja tento atualizar o Kernel?
-    Unknown26 de abril de 2019 12:27
-
-    Muito obrigado pela iniciativa. Parabéns!
-    Responder
-    Unknown26 de abril de 2019 12:28
-
-    Desculpas não saiu o meu nome (Paulo Oliveira).
-    Responder
-    Renato22 de agosto de 2019 13:45
-
-    Muito útil, aprendi comandos novos!! Testei quasetodos, menos o de formatar kkk Obrigado!
-    Responder
-    TFT17 de abril de 2021 17:18
-
-    Boas, não consigo instalar o Libreoffice 7.1. porque não tem extenção deb, mas sim rpm, se alguem poder ajudar agradeço. Obrigado.
-    Responder
-    Fernando Cézar12 de julho de 2021 12:13
-
-    Boa tarde...
-    Me tire uma dúvida, vc sabe como instalar o multiterminal no Mint, sou do paraná e utilizamos o Linux Educacional nos computadores, porém com o mint os computadores ficam bem mais rápidos, mais não consigo ativar o multiterminal, um computador com dois teclados, mouses e monitores, no L.E. usamos o Userful, tem uma solução para o Mint.
-    Desde já agradeço.
-    Responder
-
-Postar um comentário
-
-Postagens mais visitadas
-Imagem
-Escrevendo uma Macro no LibreOffice Calc - Introdução
-Este tutorial foi retirado do site Debugpoint, não mudei nada nenhuma linha de comando, apenas traduzir a explicação do tutorial e espero que ajudem a todos. O LibreOfice fornece uma maneira de escrever a sua própria macro para automatizar várias tarefas repetitivas em seu aplicativo de escritório. Você pode usar Python ou Basic para o desenvolvimento do macro. Este tutorial se concentra em escrever um macro básico 'Olá Mundo' usando básico do LibreOffice Calc .   Macro Objetivo   Nós iremos criar uma macro que iria colocar a string ' Olá Mundo' na primeira célula do LibreOffice Calc ou seja, a célula da linha 1 e col A. Criando o Macro   Abr a o LibreOffice Calc em Aplicativos = > Office/Escritório => LibreOffice Calc .   Ou pesquise " calc " na barra de pesquisa Vá para a opção no menu : Ferramentas ==> Macros == > Organizar Macros ==> LibreOffice Basic . Abai
-Imagem
-Instale o DroidCam 1.3 no Linux Mint, Ubuntu e Derivados
-DroidCam é um aplicativo de código aberto que permite os usuários utilizem  câmera frontal como uma webcam do dispositivo   Android . A última versão disponível é DroidCam 1.3 , que foi lançado recentemente , vindo apenas com correções de bugs. Para instalar DroidCam 1.3 no Ubuntu 15.04 Vervet Vivid , Ubuntu 14.10 Utopic Unicorn , Ubuntu 14.04 Trusty Tahr , Ubuntu 12.04 Precise Pangolin , Linux Mint 17,1 Rebecca , Linux Mint 17 Qiana , Linux Mint 13 Maya , Pinguy OS 14.04 , Elementary OS 0.3 Freya , OS Elementary 0,2 Luna, Deepin 2014, Peppermint Five, LXLE 14.04 , Linux Lite 2 e sistemas derivados, execute: $ sudo apt-get install linux-headers-$(uname -r) build-essential $ sudo apt-add-repository ppa:paolorotolo/droidcam $ sudo apt-get update $ sudo apt-get install droidcam Para remover, execute: $ sudo apt-get remove droidcam  Agora , você tem que instalar o cliente DroidCam no seu dispositivo Android , mas isso
-Tecnologia do Blogger
