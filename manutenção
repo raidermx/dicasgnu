@@ -21,8 +21,27 @@ reduza o consumo de energia do seu notebook, pra prolongar o uso da bateria.
 https://www.system-rescue.org/Download/
 SystemRescue CD é um sistema Linux que roda em um CD-ROM ou um PenDrive, projetado para reparar um sistema e dados após uma falha. Ele também tem como objetivo fornecer uma maneira fácil de realizar tarefas de administração em um computador, como a criação e edição de partições do disco rígido. Ele contém muitos utilitários úteis do sistema (GNU parted, partimage, FSTools) e algumas básicas (editores, Midnight Commander, ferramentas de rede).
 
+https://www.supergrubdisk.org/rescatux/
+Rescatux is a Debian-based live distribution featuring a graphical wizard for rescuing broken GNU/Linux and Windows installations and boot loaders.
+
 https://gparted.org/download.php
 GParted para lidar com tarefas de particionamento com facilidade. Uma extensa coleção de ferramentas de sistema de arquivos também estão incluídos. Ele suporta os seguintes sistemas de arquivos: btrfs, ext2, ext3, ext4, fat16, fat32, hfs, hfs +, jfs, linux-swap, ntfs, reiserfs, reiser4, e xfs.
+
+http://www.networksecuritytoolkit.org/nst/index.html
+https://www.networksecuritytoolkit.org/nst/links.html
+Distribuição Linux baseada no Fedora e proporciona um ambiente com várias ferramentas livres para segurança em redes de computadores.
+Network Security
+Wireshark
+Multi-Tap Network Packet Capture
+Geolocate Network Data
+Ntopng
+Arp Scanning
+Snort
+NMap
+Kismet
+Network Bandwidth Monitoring
+Many More...
+
 
 https://trinityhome.org/
 Trinity Rescue Kit 3.4: easier and better than ever before!
@@ -30,11 +49,23 @@ Trinity Rescue Kit or TRK is a free live Linux distribution that aims specifical
 but is equally usable for Linux recovery issues. Since version 3.4 it has an easy to use scrollable text menu that allows anyone who masters
 a keyboard and some English to perform maintenance and repair on a computer, ranging from password resetting over disk cleanup to virus scanning
 
-https://www.supergrubdisk.org/rescatux/
-Rescatux is a Debian-based live distribution featuring a graphical wizard for rescuing broken GNU/Linux and Windows installations and boot loaders.
 
 http://redorescue.com/
 erramenta para recuperação de sistema simples de usar e com interface gráfica disponível (GUI). Juntamente com a capacidade de clonar partições de disco (usando o Partclone) ele possui um editor de texto, navegador da Web, terminal e um gerenciador de arquivos. Ele também tem a capacidade de recuperar arquivos excluídos, bem como restaurar um sistema padrão.
+
+https://ophcrack.sourceforge.io/
+Essa ferramenta possui uma funcionalidade interessante: é possível recuperar todas as senhas dos usuários do sistema Windows! Seu uso é recomendado quando, por exemplo, alguém esquece a senha de administrador do sistema! 
+Ophcrack is a free Windows password cracker based on rainbow tables. It is a very efficient implementation of rainbow tables done by the inventors of the method. It comes with a Graphical User Interface and runs on multiple platforms.
+Features:
+� Runs on Windows, Linux/Unix, Mac OS X, ...
+� Cracks LM and NTLM hashes.
+� Free tables available for Windows XP and Vista/7.
+� Brute-force module for simple passwords.
+� Audit mode and CSV export.
+� Real-time graphs to analyze the passwords.
+� LiveCD available to simplify the cracking.
+� Dumps and loads hashes from encrypted SAM recovered from a Windows partition.
+� Free and open source software (GPL).
 
 https://www.hirensbootcd.org/download/
 hiren's boot cd 
@@ -71,8 +102,23 @@ he free version of Macrium Reflect supports many features that even some commerc
 https://www.aomeitech.com/ab/standard.html
 ferramenta de backup para windows.
 
+https://www.duplicati.com/
+https://duplicati.readthedocs.io/en/latest/
+Free backup software to store encrypted backups online
+For Windows, macOS and Linux
+
+
+https://www.bacula.org/
+https://www.bacula.org/documentation/
+Bacula is a set of Open Source, computer programs that permit you (or the system administrator) to manage backup, recovery, and verification of computer data across a network of computers of different kinds.
+
 http://www.amanda.org/
 AMANDA, the Advanced Maryland Automatic Network Disk Archiver, is a backup solution that allows the IT administrator to set up a single master backup server to back up multiple hosts over network to tape drives/changers or disks or optical media. Amanda uses native utilities and formats (e.g. dump and/or GNU tar) and can back up a large number of servers and workstations running multiple versions of Linux or Unix. Amanda uses a native Windows client to back up Microsoft Windows desktops and servers.
+
+https://free.drweb.com/
+Se o seu sistema Windows ou Linux tem tido problemas com malwares, então você deve usar o Dr.Web LiveCD!
+Dr.Web LiveCD irá limpar o seu computador de arquivos infectados e suspeitos, ajudará você a copiar informações importantes para um dispositivo removível de armazenamento de dados ou em outro computador, e depois tentar eliminar arquivos infectados.
+
 
 https://clonezilla.org/downloads.php
 Clonezilla is a partition and disk imaging/cloning program similar to True Image® or Norton Ghost®. It helps you to do system deployment, bare metal backup and recovery. Three types of Clonezilla are available, Clonezilla live, Clonezilla lite server, and Clonezilla SE (server edition). Clonezilla live is suitable for single machine backup and restore. While Clonezilla lite server or SE is for massive deployment, it can clone many (40 plus!) computers simultaneously. Clonezilla saves and restores only used blocks in the hard disk. This increases the clone efficiency. With some high-end hardware in a 42-node cluster, a multicast restoring at rate 8 GB/min was reported.
