@@ -1,6 +1,10 @@
 https://www.linuxdescomplicado.com.br/2017/05/10-ferramentas-linux-uteis-para-recuperacao-e-diagnostico-de-problemas-do-computador.html
 
-https://www.knopper.net/knoppix/index-en.html
+https://www.finnix.org/
+Finnix is the original utility live Linux distribution. Write it to a USB flash drive or burn it to a CD, boot it, and you're seconds from a root prompt with hundreds 
+of utilities available for recovery, maintenance, testing and more.
+
+http://www.knoppix.org/
 knnopix distro live para diagnosticar problemas de hardware.
 
 https://www.gnu.org/software/ddrescue/
@@ -11,16 +15,27 @@ A operação do ddrescue é totalmente automática. Ou seja, você não precisa 
 https://www.cgsecurity.org/wiki/TestDisk_Download
 O TestDisk é boa ferramenta para recuperar partições danificadas, ou apagadas. É bastante comum o caso de partições que por algum motivo entraram no formato RAW, deixando os dados inacessíveis. O TestDisk é capaz de recuperar essa partição, com toda a estrutura de pastas e arquivos. Também funciona muito bem caso por acidente ou não uma partição tenha sido apagada.
 
-https://archiveos.org/deft/
-deft linux
-DEFT Linux, distribuição Linux, criada na Itália, tem como objetivo auxiliar investigadores, policiais, administradores de sistemas ou qualquer pessoa que deseja realizar uma análise forense em um computador, seja ele Linux ou Windows. Em resumo, essa distribuição permite descobrir o que houve em determinado incidente computacional; através da análise dos rastros deixados (forense). Além disso, é possível realizar a recuperação de arquivos removidos acidentalmente, com o dd_rescue e photorec; ferramentas previamente instaladas.
+https://www.system-rescue.org/Download/
+SystemRescue CD é um sistema Linux que roda em um CD-ROM ou um PenDrive, projetado para reparar um sistema e dados após uma falha. Ele também tem como objetivo fornecer uma maneira fácil de realizar tarefas de administração em um computador, como a criação e edição de partições do disco rígido. Ele contém muitos utilitários úteis do sistema (GNU parted, partimage, FSTools) e algumas básicas (editores, Midnight Commander, ferramentas de rede).
+
+https://gparted.org/download.php
+GParted para lidar com tarefas de particionamento com facilidade. Uma extensa coleção de ferramentas de sistema de arquivos também estão incluídos. Ele suporta os seguintes sistemas de arquivos: btrfs, ext2, ext3, ext4, fat16, fat32, hfs, hfs +, jfs, linux-swap, ntfs, reiserfs, reiser4, e xfs.
+
+https://trinityhome.org/
+Trinity Rescue Kit 3.4: easier and better than ever before!
+Trinity Rescue Kit or TRK is a free live Linux distribution that aims specifically at recovery and repair operations on Windows machines,
+but is equally usable for Linux recovery issues. Since version 3.4 it has an easy to use scrollable text menu that allows anyone who masters
+a keyboard and some English to perform maintenance and repair on a computer, ranging from password resetting over disk cleanup to virus scanning
+
+https://www.supergrubdisk.org/rescatux/
+Rescatux is a Debian-based live distribution featuring a graphical wizard for rescuing broken GNU/Linux and Windows installations and boot loaders.
+
+http://redorescue.com/
+erramenta para recuperação de sistema simples de usar e com interface gráfica disponível (GUI). Juntamente com a capacidade de clonar partições de disco (usando o Partclone) ele possui um editor de texto, navegador da Web, terminal e um gerenciador de arquivos. Ele também tem a capacidade de recuperar arquivos excluídos, bem como restaurar um sistema padrão.
 
 https://www.hirensbootcd.org/download/
 hiren's boot cd 
 Hiren’s Boot CD é livre para usar e pode ser baixado como um ISO para a instalação em mídia USB ou CD. Ele inicia em um ambiente baseado em Linux, o MiniXP, onde você pode limpar o CMOS do seu sistema, fazer a varredura de problemas de hardware, fazer backup de seus dados em outra unidade e recuperar senhas, entre muitas outras tarefas.
-
-https://www.system-rescue.org/Download/
-SystemRescue CD é um sistema Linux que roda em um CD-ROM ou um PenDrive, projetado para reparar um sistema e dados após uma falha. Ele também tem como objetivo fornecer uma maneira fácil de realizar tarefas de administração em um computador, como a criação e edição de partições do disco rígido. Ele contém muitos utilitários úteis do sistema (GNU parted, partimage, FSTools) e algumas básicas (editores, Midnight Commander, ferramentas de rede).
 
 https://www.ultimatebootcd.com/download.html
 Ultimate Boot CD é um CD inicializável composto de imagens de disco inicializáveis, cada uma contendo uma variedade única de ferramentas de administração do sistema e interfaces para permitir operações diferentes em seu sistema, incluindo clonagem de unidade, recuperação do sistema, CPU e testes de memória, gerenciamento de BIOS, etc.
@@ -28,17 +43,27 @@ Ultimate Boot CD é um CD inicializável composto de imagens de disco inicializ�
 http://mondo.mirror.pclark.com/
 O Mondo Rescue é uma solução de recuperação de desastres para, praticamente, todas as distro Linux com as quais você pode fazer backup de dados do sistema usando fitas, rede, discos e CD/DVD. Tem suporte para BIOS e UEFI, LVM. Vários sistemas de arquivos, software e hardware Raid. É licenciado sob a GPL.
 
-https://gparted.org/download.php
-GParted para lidar com tarefas de particionamento com facilidade. Uma extensa coleção de ferramentas de sistema de arquivos também estão incluídos. Ele suporta os seguintes sistemas de arquivos: btrfs, ext2, ext3, ext4, fat16, fat32, hfs, hfs +, jfs, linux-swap, ntfs, reiserfs, reiser4, e xfs.
+https://repairlix.sourceforge.net/
+Repairlix is a networked Linux distribution/bootable system intended to fit in 12MB of media - so small that an image can be burned onto a business-card-sized shaped CDROM,
+suitable for your wallet. It has a suite of utilities for doing system recovery.
+Repairlix is now in the early stages of being useful.  These early releases contain only enough logic to produce a bootable x86 ISO image, 
+with perhaps some useful applications.  No testing has been made to verify that any of this works on other architectures, although it should be highly 
+portable to any system that supports the El Torito bootable spec.  (Note: This only applies to the sources.  I only have access to x86 architectures, 
+so that will be the only platform for which I can build the ISO images I distribute. Therefore, these will be useless on other architectures.)
 
-http://redorescue.com/
-erramenta para recuperação de sistema simples de usar e com interface gráfica disponível (GUI). Juntamente com a capacidade de clonar partições de disco (usando o Partclone) ele possui um editor de texto, navegador da Web, terminal e um gerenciador de arquivos. Ele também tem a capacidade de recuperar arquivos excluídos, bem como restaurar um sistema padrão.
 
-https://www.macrium.com/reflectfree
-he free version of Macrium Reflect supports many features that even some commercial solutions lack, including incremental backups, backup scheduling with flexible templates, and the ability to boot your backups instantly in a virtual machine. The last feature mentioned is especially useful for restoring non-booting systems that have suffered a critical data loss due to hardware failure or user error.
+https://archiveos.org/deft/
+deft linux
+DEFT Linux, distribuição Linux, criada na Itália, tem como objetivo auxiliar investigadores, policiais, administradores de sistemas ou qualquer pessoa que deseja realizar uma análise forense em um computador, seja ele Linux ou Windows. Em resumo, essa distribuição permite descobrir o que houve em determinado incidente computacional; através da análise dos rastros deixados (forense). Além disso, é possível realizar a recuperação de arquivos removidos acidentalmente, com o dd_rescue e photorec; ferramentas previamente instaladas.
+
+https://www.kali.org/get-kali/#kali-installer-images
+Kali is a rolling Linux distribution, meaning as soon as we have an update, we ship it. Would-be users have a variety of images to choose from. For more information, please see Which Image Should I Download? and Kali Branches. For most users, we recommend the latest “point release” image below, except in cases when a user requires a specific bug patch, in which case the weekly build may be best.
 
 https://www.acronis.com/en-us/products/true-image/
 Protection against ransomware is one of the most common reasons why Windows and Mac users back up their data. 
+
+https://www.macrium.com/reflectfree
+he free version of Macrium Reflect supports many features that even some commercial solutions lack, including incremental backups, backup scheduling with flexible templates, and the ability to boot your backups instantly in a virtual machine. The last feature mentioned is especially useful for restoring non-booting systems that have suffered a critical data loss due to hardware failure or user error.
 
 https://www.aomeitech.com/ab/standard.html
 ferramenta de backup para windows.
@@ -89,5 +114,3 @@ Which Clonezilla Shall I Use ?
     Clonezilla lite server: Clonezilla lite server allows you to use Clonezilla live to do massively cloning (unicast, broadcast, multicast, bittorrent are supported)
     Clonezilla SE: Clonezilla SE is included in DRBL, therefore a DRBL server must first be set up in order to use Clonezilla to do massively cloning (unicast, broadcast and multicast are supported) 
     
-https://www.kali.org/get-kali/#kali-installer-images
-Kali is a rolling Linux distribution, meaning as soon as we have an update, we ship it. Would-be users have a variety of images to choose from. For more information, please see Which Image Should I Download? and Kali Branches. For most users, we recommend the latest “point release” image below, except in cases when a user requires a specific bug patch, in which case the weekly build may be best.
