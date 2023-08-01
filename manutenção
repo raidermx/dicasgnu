@@ -15,6 +15,9 @@ A operação do ddrescue é totalmente automática. Ou seja, você não precisa 
 https://www.cgsecurity.org/wiki/TestDisk_Download
 O TestDisk é boa ferramenta para recuperar partições danificadas, ou apagadas. É bastante comum o caso de partições que por algum motivo entraram no formato RAW, deixando os dados inacessíveis. O TestDisk é capaz de recuperar essa partição, com toda a estrutura de pastas e arquivos. Também funciona muito bem caso por acidente ou não uma partição tenha sido apagada.
 
+https://linrunner.de/tlp/settings/
+reduza o consumo de energia do seu notebook, pra prolongar o uso da bateria.
+
 https://www.system-rescue.org/Download/
 SystemRescue CD é um sistema Linux que roda em um CD-ROM ou um PenDrive, projetado para reparar um sistema e dados após uma falha. Ele também tem como objetivo fornecer uma maneira fácil de realizar tarefas de administração em um computador, como a criação e edição de partições do disco rígido. Ele contém muitos utilitários úteis do sistema (GNU parted, partimage, FSTools) e algumas básicas (editores, Midnight Commander, ferramentas de rede).
 
