@@ -35,6 +35,15 @@ Rescatux is a Debian-based live distribution featuring a graphical wizard for re
 https://gparted.org/download.php
 GParted para lidar com tarefas de particionamento com facilidade. Uma extensa coleção de ferramentas de sistema de arquivos também estão incluídos. Ele suporta os seguintes sistemas de arquivos: btrfs, ext2, ext3, ext4, fat16, fat32, hfs, hfs +, jfs, linux-swap, ntfs, reiserfs, reiser4, e xfs.
 
+https://www.slax.org/
+Slax is a compact, fast, and modern Linux operating system that combines sleek design with modular approach. With the ability to run directly from a USB flash drive without the need for installation, Slax is truly portable and fits easily in your pocket. Despite its small size, it offers visually appealing graphical user interface and a carefully curated selection of basic pre-installed programs such as a file manager, text editor, terminal, and more.
+
+https://www.bodhilinux.com/
+Bodhi Linux, a lightweight distribution featuring the fast & fully customizable Moksha Desktop.
+
+https://www.slitaz.org/pt/
+Sistema Operacional GNU/Linux simples, rápido e leve para servidores & desktops
+
 http://www.networksecuritytoolkit.org/nst/index.html
 https://www.networksecuritytoolkit.org/nst/links.html
 Distribuição Linux baseada no Fedora e proporciona um ambiente com várias ferramentas livres para segurança em redes de computadores.
