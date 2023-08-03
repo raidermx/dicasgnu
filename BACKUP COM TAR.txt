@@ -1,0 +1,41 @@
+BACKUP COM TAR
+O TAR permite o agrupamento de um conjunto de arquivos em um único. Pode-se ainda já compactar os arquivos agrupados com Gzip.
+
+Parâmetros:
+-f: Nome do arquivo;
+-v: Modo verbose;
+-w: Modo interativo;
+-z: Descompacta arquivos (*.tar.gz);
+-c: Cria novo arquivo ;
+-x: Extraí arquivos;
+-t: Lista conteúdo do arquivo;
+-u: Atualiza arquivo;
+-C: Muda diretório;
+-G: Backup incremental;
+-V: Verbose.
+
+Exemplos:
+
+Empacotando origem em destino:
+
+# tar -cf destino.tar origem
+# tar -c origem > destino.tar
+# tar -cvf /dev/st0 /etc
+
+Empacotando e já compactando:
+
+# tar -cvzf destino.tar.gz origem
+# tar -cf origem | gzip -9 > destino.gz
+
+Descompactando:
+
+# tar -xvf arquivo.tar
+# tar -xzvf arquivo.tgz
+# tar -xvwf arquivo.tar
+# tar -xvf /dev/st0 *.txt /tmp
+
+Listar:
+
+# tar -tf /dev/st0
+
+Maiores informações consultar a página de manual do tar.
