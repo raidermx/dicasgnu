@@ -1,2 +1,28 @@
+
+repositórios extras:
+
 sudo dnf install --nogpgcheck https://dl.fedoraproject.org/pub/epel/epel-release-latest-$(rpm -E %rhel).noarch.rpm
 sudo dnf install --nogpgcheck https://mirrors.rpmfusion.org/free/el/rpmfusion-free-release-$(rpm -E %rhel).noarch.rpm https://mirrors.rpmfusion.org/nonfree/el/rpmfusion-nonfree-release-$(rpm -E %rhel).noarch.rpm
+
+zram
+dnf install zram-generator
+
+flatpak
+$ sudo dnf install flatpak
+$ flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+$ reboot
+
++pacotes:
+htop
+neovim
+speedtest-cli
+lm_sensors
+yum-utils
+gimp
+inkscape
+blender
+testdisk
+ddrescue
+qphotorec
+timeshift
+
