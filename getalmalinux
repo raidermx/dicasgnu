@@ -72,3 +72,330 @@ rpm -qa | grep el7 # for 7 to 8 migration
 rpm -qa | grep el8 # for 8 to 9 migration
 cat /var/log/leapp/leapp-report.txt
 cat /var/log/leapp/leapp-upgrade.log
+
+
+
+CentOS 7/8: Migre a distro para o Rocky ou AlmaLinux [How-to]
+Canal HackerCanal Hacker10 de janeiro de 2023805 views0
+Durante anos, muitos administradores de sistema têm utilizado o CentOS em seus servidores. Atualmente, empresas dos mais variados segmentos usam a distro. Por exemplo, empresas de computação em nuvem (webserver hosting) oferecem a distro como opção de sistema operacional a ser instalado, bem como também as do segmento bancário, health techs (saúde), e outras, utilizam a distro em seu parque de servidores (virtuais ou físicos).
+
+Trocando em miúdos, o CentOS tem dominado o mercado de servidores Linux nos últimos anos.
+
+Mas o que isso tem a ver com segurança da informação? Tudo a ver.
+
+Índice
+A situação atual do CentOS
+O problema de segurança e o suporte envolvendo o CentOS 7 e 8
+Migre seu CentOS 7/8 para o Rocky Linux ou Alma Linux
+Mas e a migração tio?
+Migrando o CentOS 8 para o Rocky Linux 8
+Migrando o CentOS 8 para o AlmaLinux 8
+Migrando o CentOS 7 para o Rocky Linux 8 (ELevate)
+Migrando o CentOS 7 para o AlmaLinux 8
+Conclusão
+A situação atual do CentOS
+Em dezembro de 2020, a Red Hat anunciou mudanças na relação com o projeto CentOS, o que foi um choque para a comunidade. Muito ficaram P da vida, foram na Internet arrancar os cabelos rsrs.
+
+Olhe pra cima: Migre o CentOS 7/8 para o Rocky ou AlmaLinux [How-to]
+End of Lifetime (EOL) ou o Fim do Tempo de vida (Última atualização em 29/01/2022) | Créditos da imagem:
+https://wiki.centos.org/About/Product
+Diante disso, o CentOS publicou a tabela acima em seu site, onde detalhamos pra você abaixo:
+
+CentOS 7: As atualizações completas encerraram em 6 de agosto de 2020. Já as atualizações de manutenção encerrarão em 30 de junho de 2024.
+CentOS Stream 8: As atualizações completas encerrarão em 31 de maio de 2024 e as de manutenção também encerrarão em 31 de maio de 2024.
+Atualizações completas
+
+Durante esta fase, suporte para novo hardware será fornecido a critério da Red Hat por meio de Update Sets (conjuntos de atualizações de configurações) ou individualmente de forma imediata via erratas de segurança. Estes conjuntos de atualizações normalmente são lançados de 2 a 3 vezes por ano, com novas ISOs (imagens de instalação) lançadas como parte de cada conjunto de atualizações.
+
+Atualizações de manutenção
+
+Durante a fase de atualizações de manutenção, apenas as erratas de segurança e algumas correções de bugs de missão crítica serão lançadas. Em alguns casos, conjuntos de atualizações serão disponibilizados no repositório do projeto (Upstream).
+
+O problema de segurança e o suporte envolvendo o CentOS 7 e 8
+Muitos administradores estão de cabelos em pé, pois antes do aviso da RedHat em dezembro de 2020, eles haviam migrado o CentOS 7 (e versões anteriores) para a versão 8, sendo que agora, o CentOS 8 como o conhecíamos não possui mais suporte da RedHat.
+
+Paralelo a este cenário, dos administradores que agora não sabem bem o que fazer com parques enormes com CentOS 8 (e também com o 7 ou versões anteriores), temos aqueles usuários que também estão com o CentOS 7/8, mas que acham que não precisam fazer nada, e que de forma errada, pensam que estão seguros, “pois seus sistemas continuarão a receber atualizações”.
+
+Sabemos que não é bem assim.
+
+Não quero parecer alarmista, mas muitos me veem como o cientista do filme Não Olhe Pra Cima, onde ele, assim como eu, tenta avisar as pessoas (às empresas, administradores de sistema, por exemplo) de que algo grave pode acontecer se não tomaram as devidas medidas, como um plano de migração por exemplo.
+
+Olhe pra cima: Migre o CentOS 7/8 para o Rocky ou AlmaLinux [How-to]
+Cena do filme “Não Olhe pra Cima | Créditos da imagem:
+https://www.filmelier.com/br/noticias/nao-olhe-para-cima-analise
+Vamos para alguns pontos importantes:
+
+CentOS 7: seu sistema não estará 100% (ou próximo desta porcentagem) seguro se estiver utilizando esta distro. Apenas o suporte para as Atualizações de Manutenção é que continuará até 30 de junho de 2024. E este suporte não garante a segurança de um ambiente de produção.
+
+Conforme consta no site da distro, e que pode ser acessado aqui, “apenas as erratas de segurança e algumas correções de bugs de missão crítica serão lançadas”. Isso quer dizer que ainda terá erratas de segurança e correções de alguns bugs, ALGUNS. É importante ressaltar que, o suporte para as atualizações completas não fazem mais parte do CentOS 7 desde 6 de agosto de 2020, ou seja, seu CentOS 7 não terá estabilidade, e isso, é uma coisa bastante grave para versões que são utilizadas em ambiente de produção.
+CentOS 8: Como podemos ver na tabela acima, todas as atualizações, sejam as completas ou de manutenção, encerraram em 31 de dezembro de 2021. O CentOS 8 ainda disponível com suporte para atualizações completas e de atualização é CentOS Stream 8. Sendo assim, todo update que você fizer no CentOS 8, será utilizado como base o repositório do CentOS Stream 8. Mas estarei protegido então né tio? Não caro padawan, longe disso.
+CentOS Stream 8: Esta versão do CentOS, que também disponível para download na forma de imagem .iso, está muito longe de ser uma distro para uso em ambientes de produção. O Stream no nome significa que serão lançadas atualizações contínuas, com pouco tempo entre elas, com a maioria não sendo testada antes. Isso significa que o CentOS Stream é na verdade um ambiente de desenvolvimento contínuo, com pacotes não testados 100% sendo disponibilizados para download via update. Acha correto usar o seu ambiente de produção como desenvolvimento, aplicando atualizações que não foram devidamente testadas como nas versões estáveis? Seu ambiente de produção não terá mais estabilidade e poderá parar em algum momento. Isso não é achismo ou alarmismo. São opiniões que empresas e profissionais sério(a)s têm em comum quando falam sobre este assunto.
+
+Obviamente se você não atualizar o seu sistema, as atualizações possivelmente não testadas não serão instaladas em seu sistema. Tudo depende do nível de risco que sua empresa está disposta a aceitar (junto com outras medidas de segurança), instalando ou não instalando as atualizações.
+Downstream e Upstream
+
+O CentOS Linux é um rebuild (reconstrução) do Red Hat Enterprise Linux (RHEL), ou seja, é o downstream do RHEL. Os números da versão de lançamento do CentOS refletem a data de lançamento do RHEL em que são baseados. Por exemplo, o CentOS 8.2105 é um rebuild do RHEL 8.3, lançado em maio de 2021.
+
+O CentOS Stream, por outro lado, é o upstream, ou seja, o branch de desenvolvimento público do RHEL. Especificamente, o CentOS Stream 8 é o upstream para a próxima versão secundária do RHEL 8, o CentOS Stream 9 para a próxima versão secundária do RHEL 9 e assim por diante.
+
+O CentOS realmente não é testado?
+
+Também não queremos dizer que os pacotes não são testados. Conforme consta no site do projeto, os testes no CentOS Linux e CentOS Stream são semelhantes e a diferença ocorre principalmente no timing em que as coisas acontecem.
+
+As alterações atingem o CentOS Stream e o RHEL apenas após passarem por vários testes. Esses testes ocorrem tanto internamente na Red Hat quanto nos testes públicos em toda a distribuição. Os usuários (leia-se também as empresas que usam a distro) também podem contribuir (caso estejam usando o CentOS 8/Stream) com testes para o sistema, de forma que futuras alterações não quebrem coisas importantes.
+
+
+
+Na forma de um rebuild, o CentOS Linux também se beneficia destes mesmos testes, só que antes de existir os CentOS Stream, não havia um jeito dos usuários influenciarem no que foi testado (diga-se também relatar se houve algum problema em seu CentOS).
+
+Mas aí você me pergunta: O que fazer com meu parque de servidores com CentOS 7 e 8?
+
+Veja a seguir.
+
+Migre seu CentOS 7/8 para o Rocky Linux ou Alma Linux
+Este é o caminho mais sensato a ser seguido: migrar suas instalações do CentOS 7 ou 8 para distribuições estáveis, e que ainda sejam baseadas no RedHat Linux, bem como também no seu modelo de lançamento de pacotes estáveis, disponibilizando-os logo em seguida após a Red Hat lançá-los.
+
+Rocky Linux
+
+O Rocky Linux foi projetado como um substituto do CentOS. Ele foi criado pela mesma pessoa que deu origem ao CentOS, Gregory Kurtzer, e o Rocky segue a mesma missão de oferecer uma versão corporativa do Linux, mas gratuita.
+
+A distro é uma versão completa compatível com o mesmo binário que usa o código-fonte do Red Hat Enterprise Linux (RHEL).
+
+Alma Linux
+
+A empresa CloudLinux, grade apoiadora do CentOS de longa data, está recriando o mesmo modelo de suporte no AlmaLinux. Embora a empresa esteja financiando em grande parte esta distro, a CloudLinux não possui o projeto ou os direitos autorais do software que produz. O projeto pertence 100% à comunidade.
+
+Assim como o Rocky Linux, o AlmaLinux acompanha as versões do RHEL. Por exemplo, a versão mais recente do AlmaLinux, a 8.5, é uma cópia exata do RHEL 8.5.
+
+Mas e a migração tio?
+As duas distribuições fornecem scripts que realizam a “conversão”/migração de seu CentOS 8 para as respectivas distros (Rocky e Alma). Mas o meu CentOS 7 como fica? Calma…
+
+Esta migração (a ferramenta do Rocky Linux é a rocky-rools.sh e a do AlmaLinux é a almalinux-deploy.sh) gira em torno de ajustar a configuração atual de repositórios para os da nova distro, bem como também migrar todos os pacotes do CentOS para o Rocky ou Alma Linux (dependendo de qual ferramenta usar), mas mantendo os dados e configurações atuais.
+
+
+ELevate
+
+A Migração do CentOS 7 para o Rocky Linux 8 e AlmaLinux 8 ocorre um pouco diferente, já que era possível realizar o processo apenas à partir do CentOS 8. Graças à ferramenta ELevate (o “EL” em maiúsculo fazendo alusão às iniciais de Enterprise Linux), desenvolvida pelo time do AlmaLinux (olha a comunidade se ajudando!), é possível migrar do CentOS 7 para as seguintes distribuições:
+
+– AlmaLinux 8
+– EuroLinux 8
+– Rock Linux 8
+– Oracle Linux 8
+– CentOS Stream
+
+Na seção de migração do CentOS 7 veremos esta ferramenta em funcionamento.
+
+
+UPDATE (10/01/2023):
+
+Em novembro de 2022 foi lançada a versão 9.1 das distros Alma Linux e Rock Linux. Você não conseguirá migrar um CentOS 7 diretamente para esta versão, sendo necessário migrar primeiro para a versão 8 da distro de sua escolha (Neste post explicamos direitinho como fazer isso).
+
+Caso já possua o CentOS 8 e queira migrar para algumas destas distros, basta seguir as etapas de migração do CentOS 8 para o AlmaLinux 8/Rock Linux 8. O script utilizado em cada uma das distros deverá se encarregar de instalar a última versão (a 9.1). Caso isso realmente não ocorra, basta utilizar os comandos padrão de upgrade de versão, que com certeza você saberá :-).
+
+Aviso importante
+
+Sempre realize backup de seu sistema antes de qualquer migração. Quando estamos preparados, quando executamos ações de boas práticas, estamos na verdade diminuindo a porcentagem da ocorrência de problemas (mesmo sendo impossível de que não ocorram em algum momento). É a Lei de Murphy. Então, sempre realize backup e possua um bom plano de migração de sistemas.
+
+Migrando o CentOS 8 para o Rocky Linux 8
+Sem mais delongas, vamos botar a mão na massa.
+
+Antes de tudo, vamos verificar a versão atual do CentOS 8. Em nosso lab, estamos usando o CentOS 8.5.2111:
+
+cat /etc/centos-release
+Como boa prática, atualize os pacotes do sistema com o comando:
+
+sudo dnf update
+Em seguida reinicie o sistema:
+
+sudo reboot
+Instate o client do Git
+
+sudo dnf install git
+Acesse o diretório /tmp e clone o repositório da ferramenta de migração do Rocky Linux
+
+cd /tmp/
+git clone https://github.com/rocky-linux/rocky-tools.git
+Acesse o diretório do repositório recém-criado, dentro de /tmp
+
+cd /tmp/rocky-tools/migrate2rocky
+Altere a permissão para execução do script de migração
+
+chmod -v +x migrate2rocky.sh
+Inicie o processo de migração do CentOS 8 para o Rocky Linux 8 com o comando:
+
+sudo ./migrate2rocky.sh -r
+Processo de migração iniciando…
+
+O processo de migração terminará (caso não tenha ocorrido nenhum problema hehe).
+
+Reinicie o sistema com o comando:
+
+sudo reboot
+Ao digitar o mesmo comando para verificar a versão do sistema operacional (cat /etc/centos-release), vemos que a migração foi realizada com sucesso para o Rocky Linux 8, neste caso para a versão 8.5 (Green Obsidian), ou a 9.1 (dependendo de quando estiver realizando este procedimento).
+
+Migrando o CentOS 8 para o AlmaLinux 8
+O processo é bastante similar ao do Rocky Linux.
+
+Aqui também utilizamos a mesma versão do CentOS 8, a 8.5.2111, quando executamos o comando:
+
+sudo cat /etc/centos-release
+Realize a atualização dos pacotes do sistema operacional (caso não seja possível atualizar, pode prosseguir para o próximo passo):
+
+sudo dnf update
+Acesse o diretório /tmp/ e realize o download do script de migração do AlmaLinux, digitando:
+
+wget https://raw.githubusercontent.com/AlmaLinux/almalinux-deploy/master/almalinux-deploy.sh
+Atribua a permissão de execução para o script:
+
+chmod -v +x almalinux-deploy.sh
+E para iniciar o processo de migração do CentOS 8 para o AlmaLinux 8, digite:
+
+sudo ./almalinux-deploy.sh
+Reinicie o sistema:
+
+sudo reboot
+Em seguida, rode o comando abaixo para manter os arquivos do sistema atualizados conforme o repositório:
+
+sudo dnf distro-sync -y
+Ao digitar o comando para verificar a versão do sistema (cat /etc/centos-release), veremos que o CentOS 8 foi migrado com sucesso para o AlmaLinux, release 8.5 (Arctic Sphynx) ou para o 9.1 (dependendo de quando estiver realizando este procedimento).
+
+Migrando o CentOS 7 para o Rocky Linux 8 (ELevate)
+Usaremos a ferramenta ELevate para realizar a migração do CentOS 7 para o Rocky Linux 8. Siga as etapas à seguir.
+
+É necessário que sua distribuição esteja utilizando o último release da versão 7, com todos os pacotes atualizados. Para isso, execute os seguintes comandos na sequência:
+
+sudo yum update
+sudo yum upgrade
+Em seguida reinicie o sistema:
+
+sudo reboot
+Em seguida, digite o seguinte comando para constatar a versão do seu CentOS:
+
+cat /etc/centos-release
+Ao digitar o comando acima, verá o último release do CentOS 7: 7.9.2009 (Core).
+
+Agora sim iniciaremos o processo de migração do CentOS 7 para o Rocky Linux 8.
+
+Boraaaaaaaa!
+
+Etapa 1: Instalar o ELevate
+
+Primeiramente, instale o pacote elevate-release usando o comando:
+
+sudo yum install http://repo.almalinux.org/elevate/elevate-release-latest-el7.noarch.rpm
+O processo de instalação do ELevate iniciará.
+
+O pacote elevate-release fornece o utilitário Leapp e os dados necessários para migrar um Red Hat Enterprise Linux 7.x para quaisquer versões de um Enterprise Linux 8.x de sua escolha. Este pacote é uma mão na roda, já que como os pacotes do RHEL 7 são compatíveis com o CentOS 7, então o processo de realizar a migração para o Rocky ou Alma acaba sendo possível.
+
+Etapa 2: Instalar o Leapp e os dados da migração
+
+Como nesta etapa queremos migrar para o Rocky Linux 8, precisaremos instalar o seguinte pacote do Leapp:
+
+leapp-data-rocky
+Digite o seguinte comando para instalar este pacote:
+
+sudo yum install -y leapp-upgrade leapp-data-rocky
+Etapa 3: Iniciar a validação da pré-migração
+
+Execute o seguinte comando para verificar se a migração será possível ou não:
+
+sudo leapp preupgrade
+Isso realizará uma série de ações e verificações.
+
+Em meu caso apareceram alguns itens que impediram a realização da migração:
+
+1: Possible problems with remote login using root account
+
+
+2: Detected loaded kernel drivers which have been removed in RHEL 8
+
+3: Missing required answers in the answer file
+
+Detalhamento e correções dos erros:
+
+Maiores detalhes podem ser conferidos no arquivo /var/log/leapp/leapp-report.txt.
+
+1: Possible problems with remote login using root account:
+
+Este alerta informa que existe um problema de configuração em meu ssh que impede que o usuário root se conecte via ssh. Para corrigir, executamos o seguinte comando (mudaremos isso após a migração):
+
+echo PermitRootLogin yes | sudo tee -a /etc/ssh/sshd_config
+2: Detected loaded kernel drivers which have been removed in RHEL 8:
+
+Este alerta informa que existem drivers de kernel do CentOS 7 que foram removidos no RHEL 8.
+
+
+Para remover o driver mencionado (pata_acpi), digitamos o comando abaixo:
+
+sudo rmmod pata_acpi
+3: Missing required answers in the answer file
+
+Uma ou mais seções no arquivo de resposta (answerfile) estão faltando para o usuário poder escolher (para o processo de migração).
+
+Para resolver este problema, digitamos o seguinte comando:
+
+sudo leapp answer --section remove_pam_pkcs11_module_check.confirm=True
+Tendo corrigido todos os problemas, rodamos novamente o comando de verificação de pré-migração para termos certeza de que os erros não aparecerão novamente:
+
+sudo leapp preupgrade 
+A etapa de verificação foi concluída com sucesso, não gerando nenhum erro que impeça o processo de migração.
+
+Etapa 4: Iniciando a migração do CentOS 7 para o Rocky Linux
+
+Digite o comando a seguir para iniciar o processo de migração:
+
+sudo leapp upgrade
+Quando estiver concluído, reinicie o sistema.
+
+Obs: Será criada uma entrada no menu do Grub com o seguinte nome: Elevate-Upgrade-Initramfs. O boot ocorrerá automaticamente por ali. Neste processo ainda serão executadas algumas ações, como a instalação e atualização de pacotes.
+
+Em seguida, verifique a versão da distribuição:
+
+sudo cat /etc/centos-release
+Ao digitarmos o comando acima, vemos que o sistema operacional em execução não é mais o CentOS 7, mas sim o Rock Linux 8.5 (Green Obsidian), ou o 9.1 (dependendo de quando estiver realizando este procedimento).
+
+Migrando o CentOS 7 para o AlmaLinux 8
+Etapa 1: Instalar o ELevate
+
+Primeiramente realize a instalação do pacote elevate-release:
+
+sudo yum install http://repo.almalinux.org/elevate/elevate-release-latest-el7.noarch.rpm
+Etapa 2: Instale a ferramenta Leapp e os dados de migração
+
+sudo yum install -y leapp-upgrade leapp-data-almalinux
+Etapa 3: Iniciar a verificação de pré-migração
+
+sudo leapp preupgrade
+Ocorreram alguns erros que impediram o funcionamento da migração. Em nosso lab, usamos os seguintes comandos para corrigir os problemas apontados:
+
+echo PermitRootLogin yes | sudo tee -a /etc/ssh/sshd_config 
+sudo rmmod pata_acpi 
+leapp answer --section remove_pam_pkcs11_module_check.confirm=True 
+E executamos novamente o comando para validar as configurações da pré-migração:
+
+sudo leapp preupgrade
+Etapa 4: Iniciando a migração do CentOS 7 para o AlmaLinux 8
+
+Digite o comando a seguir para iniciar o processo de migração:
+
+sudo leapp upgrade
+Quando estiver concluído, reinicie o sistema.
+
+Obs: Será criada uma entrada no menu do Grub com o seguinte nome: Elevate-Upgrade-Initramfs. O boot ocorrerá automaticamente por ali. Neste processo ainda serão executadas algumas ações, como a instalação e atualização de pacotes.
+
+Em seguida, verifique a versão da distribuição:
+
+sudo cat /etc/centos-release
+Ao digitarmos o comando acima, vemos que o sistema operacional em execução não é mais o CentOS 7, mas sim o AlmaLinux 8.5 (Arctic Sphynx), ou o 9.1 (dependendo de quando estiver realizando este procedimento).
+
+Conclusão
+Espero que tenha gostado do post. Como diz aquele ditado “aqui matamos a cobra e mostramos o pau“, ou seja, falamos do problema e já mostramos a solução hehe
+
+Lembre-se que este post não tem o objetivo de ser referência em migração de sistemas operacionais Linux, nem de abordar todo o assunto.
+
+
+Estava querendo fazer esse post faz tempo, pois sentia falta de um conteúdo que abordasse essa temática de usar uma distribuição sem o devido suporte, em ambiente de produção, mas que falasse também sobre procedimentos de migração.
+
+Este post poderá ser atualizado no futuro. Uma coisa que não ficou 100% claro é quando pode ser viável ou não o uso do CentOS Stream nas empresas. Em breve um post sobre isso será feito.
+
+Caso tenha qualquer dúvida sobre o que falamos aqui, não hesite em mandar uma mensagem nos comentários, no email falecom@canalhacker.com.br, ou ainda, nas nossas redes sociais (Facebook, Youtube e Instagram).
