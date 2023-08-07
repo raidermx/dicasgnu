@@ -12,3 +12,4 @@ https://pt-br.libreoffice.org/
 
 microsoft365
 https://sourceforge.net/projects/microsoftonlineapps/
+sudo snap install office365webdesktop --beta
