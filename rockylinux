@@ -4,9 +4,17 @@ https://docs.rockylinux.org/guides/installation/
 https://wiki.rockylinux.org/
 
 repositórios extras:
-
+habilitar repositórios do gnome-software
 sudo dnf install --nogpgcheck https://dl.fedoraproject.org/pub/epel/epel-release-latest-$(rpm -E %rhel).noarch.rpm
 sudo dnf install --nogpgcheck https://mirrors.rpmfusion.org/free/el/rpmfusion-free-release-$(rpm -E %rhel).noarch.rpm https://mirrors.rpmfusion.org/nonfree/el/rpmfusion-nonfree-release-$(rpm -E %rhel).noarch.rpm
+sudo dnf config-manager --set-enabled crb
+
+configurar dnf:
+Para isso, abra um terminal e digite:
+sudo nano /etc/dnf/dnf.conf
+max_parallel_downloads=10
+fastestmirror=true
+deltarpm=true
 
 zram
 dnf install zram-generator
@@ -17,16 +25,14 @@ $ flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub
 $ reboot
 
 +pacotes:
-htop
-neovim
-speedtest-cli
-lm_sensors
-yum-utils
-gimp
-inkscape
-blender
-testdisk
-ddrescue
-qphotorec
-timeshift
+sudo dnf install  lm_sensors speedtest-cli vim neovim mc geany git curl testdisk ddrescue qphotorec smartmontools gsmartcontrol hwinfo lshw-gui htop yum-utils tmux tmate timeshift gnome-tweaks dia audacious gimp inkscape blender fish redshift ark filezilla arj cabextract p7zip lzip unrar unzip zip
+
+mudar o shell:
+sudo chsh -s /usr/bin/fish
+
+habilitar o cockpit:
+sudo systemctl enable --now cockpit.socket
+sudo firewall-cmd --add-service=cockpit
+sudo firewall-cmd --add-service=cockpit --permanent
+sudo firewall-cmd --reload
 
