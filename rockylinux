@@ -25,7 +25,7 @@ $ flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub
 $ reboot
 
 +pacotes:
-sudo dnf install  lm_sensors speedtest-cli vim neovim mc geany git curl testdisk ddrescue qphotorec smartmontools gsmartcontrol hwinfo lshw-gui htop yum-utils tmux tmate timeshift gnome-tweaks dia audacious gimp inkscape blender fish redshift ark filezilla arj cabextract p7zip lzip unrar unzip zip
+sudo dnf install  ntfs-3g lm_sensors speedtest-cli vim neovim mc geany git curl testdisk ddrescue qphotorec smartmontools gsmartcontrol hwinfo lshw-gui htop yum-utils tmux tmate timeshift gnome-tweaks dia audacious gimp inkscape blender fish redshift ark filezilla arj cabextract p7zip lzip unrar unzip zip
 
 mudar o shell:
 sudo chsh -s /usr/bin/fish
@@ -36,3 +36,20 @@ sudo firewall-cmd --add-service=cockpit
 sudo firewall-cmd --add-service=cockpit --permanent
 sudo firewall-cmd --reload
 
+otimizar o sistema de arquivos xfs
+
+A primeira coisa que precisamos fazer é descobrir como verificar a quantidade de fragmentação. 
+Podemos usar o utilitário xfs_db (significa xfs debugging) para verificar o nível de fragmentação.
+df -h   para verificar o label
+sudo xfs_db -c frag -r /dev/mapper/label
+
+O sinalizador -c recebe vários comandos, entre os quais está o comando frag para verificar o nível de fragmentação. 
+O sinalizador -r usado para garantir que a operação seja totalmente somente leitura.
+
+Se descobrirmos que há alguma fragmentação neste sistema de arquivos, executamos o comando xfs_fsr no nó do dispositivo:
+
+sudo xfs_fsr /dev/mapper/label
+
+Este último comando é tudo que existe para desfragmentar seu sistema de arquivos, você pode adicioná-lo como um cronjob que 
+monitorará regularmente seu sistema de arquivos. Mas fazer isso para xfs faz pouco sentido. A alocação baseada em extensão do 
+XFS garante que problemas como fragmentação sejam mínimos.
