@@ -9,6 +9,14 @@ sudo dnf install --nogpgcheck https://dl.fedoraproject.org/pub/epel/epel-release
 sudo dnf install --nogpgcheck https://mirrors.rpmfusion.org/free/el/rpmfusion-free-release-$(rpm -E %rhel).noarch.rpm https://mirrors.rpmfusion.org/nonfree/el/rpmfusion-nonfree-release-$(rpm -E %rhel).noarch.rpm
 sudo dnf config-manager --set-enabled crb
 
+configurar swap:
+sudo dnf install zram-generator
+sudo vim /etc/sysctl.d/99-sysctl.conf
+vm.swappiness=1
+vm.vfs_cache_pressure=50
+vm.dirty_background_bytes=16777216 
+vm.dirty_bytes=50331648 
+
 configurar dnf:
 Para isso, abra um terminal e digite:
 sudo nano /etc/dnf/dnf.conf
@@ -16,13 +24,17 @@ max_parallel_downloads=10
 fastestmirror=true
 deltarpm=true
 
-zram
-dnf install zram-generator
-
 flatpak
-$ sudo dnf install flatpak
-$ flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-$ reboot
+sudo dnf install flatpak
+flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+reboot
+
+snap:
+sudo dnf install snapd
+sudo systemctl enable --now snapd.socket
+sudo ln -s /var/lib/snapd/snap /snap
+sudo reboot
+
 
 +pacotes:
 sudo dnf install  ntfs-3g lm_sensors speedtest-cli vim neovim mc geany git curl testdisk ddrescue qphotorec smartmontools gsmartcontrol hwinfo lshw-gui htop yum-utils tmux tmate timeshift gnome-tweaks dia audacious gimp inkscape blender fish redshift ark filezilla arj cabextract p7zip lzip unrar unzip zip
