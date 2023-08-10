@@ -1,0 +1,33 @@
+criar vários diretórios de uma vez
+mkdir -pv Livros/{Autores, Artigos, Categorias, Linux}
+
+criar outros diretórios dentro de subdiretórios. 
+mkdir -pv Livros/{Autores/{Carlos, Eduardo}, Artigos, Categorias, Linux}
+
+CRIAR DIRETÓRIO COM DATA ATUAL:
+
+mkdir -pv test_Dir_`date +%d-%b-%Y`/
+mkdir -pv Dir_estudos_`date +%d-%b-%Y`/
+
+CRIAR ARQUIVO .TXT COM DATA ATUAL:
+
+touch meuArquivo_`date +%d-%b-%Y`.txt
+touch Arq-data-atual_`date +%d-%b-%Y`.txt
+
+CRIAR ARQUIVO .SH COM DATA ATUAL:
+
+touch meuScript-1_`date +%d-%b-%Y`.sh
+touch script2-ata-atual_`date +%d-%b-%Y`.sh
+
+RENOMEAR DIRETÓRIO COM DATA ATUAL:
+
+mv MeuDir/ MeuDir_`date +%d-%b-%Y`/
+
+mv bin/ bin_`date +%d-%b-%Y`/
+
+
+REMOVER ARQUIVO
+
+rm arquivo -rfiv
+
+
