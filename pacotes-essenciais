@@ -411,7 +411,7 @@ Docker
 apt install docker.io
 
 criar chave privada
-ssh-keygen -o -a 100 -t ed25519 -f ~/.ssh/id_ed25519 -C "boss@akitaonrails.com"
+ssh-keygen -o -a 100 -t ed25519 -f ~/.ssh/id_ed25519 -C "user@email.com"
 
 adicionar chave no agente ssh
 eval "$(ssh-agent -s)"
