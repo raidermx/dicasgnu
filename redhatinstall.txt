@@ -51,7 +51,7 @@ sudo firewall-cmd --add-service=cockpit --permanent
 sudo firewall-cmd --reload
 
 instalar pacotes extras:
-sudo dnf install  dnf-automatic ntfs-3g lm_sensors speedtest-cli vim neovim mc geany bluefish git curl testdisk ddrescue qphotorec smartmontools gsmartcontrol hwinfo lshw-gui htop yum-utils tmux tmate timeshift gnome-tweaks dia gimp inkscape blender fish redshift ark file-roller filezilla arj cabextract p7zip lzip unrar unzip zip vlc kdenlive transmission-gtk aria2 yt-dlp
+sudo dnf install  dnf-automatic ntfs-3g lm_sensors speedtest-cli vim neovim mc emacs geany bluefish git curl testdisk ddrescue qphotorec smartmontools gsmartcontrol hwinfo lshw-gui htop yum-utils tmux tmate timeshift gnome-tweaks dia gimp inkscape blender fish redshift ark file-roller filezilla arj cabextract p7zip lzip unrar unzip zip vlc kdenlive transmission-gtk aria2 yt-dlp
 
 instalar navegador:
 aria2c https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm
@@ -74,5 +74,10 @@ https://extensions.gnome.org/extension/120/system-monitor/
   systemctl enable tlp && tlp start
   
 flatpak install motrix
+flatpak inatall peazip
+
+office no linux
+https://www.makeuseof.com/tag/install-use-microsoft-office-linux/
+flatpak install wps
 
 configurar usuarios, serviços online, navegador e configurações de energia.
