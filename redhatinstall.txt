@@ -54,9 +54,24 @@ instalar pacotes extras:
 sudo dnf install  dnf-automatic ntfs-3g lm_sensors speedtest-cli vim neovim mc geany bluefish git curl testdisk ddrescue qphotorec smartmontools gsmartcontrol hwinfo lshw-gui htop yum-utils tmux tmate timeshift gnome-tweaks dia gimp inkscape blender fish redshift ark file-roller filezilla arj cabextract p7zip lzip unrar unzip zip vlc kdenlive transmission-gtk aria2 yt-dlp
 
 instalar navegador:
-https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm
+aria2c https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm
+chmod +x google-chrome-stable_current_x86_64.rpm
+dnf install google-chrome-stable_current_x86_64.rpm
 
 teamviewer:
-https://www.teamviewer.com/pt-br/download/linux/
+aria2c https://download.teamviewer.com/download/linux/teamviewer.x86_64.rpm
+chmod +x teamviewer.x86_64.rpm
+dnf install teamviewer.x86_64.rpm
 
+## integração com o navegador
+https://addons.mozilla.org/en-US/firefox/addon/gnome-shell-integration/
+https://extensions.gnome.org/extension/615/appindicator-support/
+https://extensions.gnome.org/extension/19/user-themes/
+https://extensions.gnome.org/extension/120/system-monitor/
+
+## otimizar bateria do notebook
+  apt install tlp tlp-rdw
+  systemctl enable tlp && tlp start
+  
+flatpak install motrix
 configurar usuarios, serviços online, navegador e configurações de energia.
