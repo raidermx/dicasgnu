@@ -73,8 +73,9 @@ https://extensions.gnome.org/extension/120/system-monitor/
   apt install tlp tlp-rdw
   systemctl enable tlp && tlp start
   
-flatpak install motrix
-flatpak inatall peazip
+flatpak install Motrix
+flatpak inatall PeaZip
+flatpak install VideoDownloader
 
 office no linux
 https://www.makeuseof.com/tag/install-use-microsoft-office-linux/
