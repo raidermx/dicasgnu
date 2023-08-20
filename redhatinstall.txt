@@ -1,0 +1,62 @@
+instalação redhat enterprise linux
+
+developers.redhat.com (assinatura gratuita - 16 máquinas)
+test media
+particionamento manual
+excluir discos
+particionamento automatico
+lvm
+server gui
+configurar internet
+registrar na redhat
+definir senhas
+instalar
+
+configurar swap:
+sudo dnf install zram-generator
+sudo vim /etc/sysctl.d/99-sysctl.conf
+vm.swappiness=1
+vm.vfs_cache_pressure=50
+vm.dirty_background_bytes=16777216 
+vm.dirty_bytes=50331648 
+
+configurar dnf:
+Para isso, abra um terminal e digite:
+sudo nano /etc/dnf/dnf.conf
+max_parallel_downloads=10
+fastestmirror=true
+deltarpm=true
+
+atualizar:
+sudo dnf upgrade --refresh 
+sudo dnf update
+
+adicionar repositórios:
+
+sudo dnf install --nogpgcheck https://dl.fedoraproject.org/pub/epel/epel-release-latest-$(rpm -E %rhel).noarch.rpm
+
+sudo dnf install --nogpgcheck https://mirrors.rpmfusion.org/free/el/rpmfusion-free-release-$(rpm -E %rhel).noarch.rpm https://mirrors.rpmfusion.org/nonfree/el/rpmfusion-nonfree-release-$(rpm -E %rhel).noarch.rpm
+
+sudo subscription-manager repos --enable "codeready-builder-for-rhel-9-$(uname -m)-rpms"
+
+
+flatpak
+sudo dnf install flatpak
+flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+
+habilitar o cockpit:
+sudo systemctl enable --now cockpit.socket
+sudo firewall-cmd --add-service=cockpit
+sudo firewall-cmd --add-service=cockpit --permanent
+sudo firewall-cmd --reload
+
+instalar pacotes extras:
+sudo dnf install  dnf-automatic ntfs-3g lm_sensors speedtest-cli vim neovim mc geany bluefish git curl testdisk ddrescue qphotorec smartmontools gsmartcontrol hwinfo lshw-gui htop yum-utils tmux tmate timeshift gnome-tweaks dia gimp inkscape blender fish redshift ark file-roller filezilla arj cabextract p7zip lzip unrar unzip zip vlc kdenlive transmission-gtk aria2 yt-dlp
+
+instalar navegador:
+https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm
+
+teamviewer:
+https://www.teamviewer.com/pt-br/download/linux/
+
+configurar usuarios, serviços online, navegador e configurações de energia.
