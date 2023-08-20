@@ -56,12 +56,12 @@ sudo dnf install  dnf-automatic ntfs-3g lm_sensors speedtest-cli vim neovim mc g
 instalar navegador:
 aria2c https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm
 chmod +x google-chrome-stable_current_x86_64.rpm
-dnf install google-chrome-stable_current_x86_64.rpm
+sudo dnf install google-chrome-stable_current_x86_64.rpm
 
 teamviewer:
 aria2c https://download.teamviewer.com/download/linux/teamviewer.x86_64.rpm
 chmod +x teamviewer.x86_64.rpm
-dnf install teamviewer.x86_64.rpm
+sudo dnf install teamviewer.x86_64.rpm
 
 ## integração com o navegador
 https://addons.mozilla.org/en-US/firefox/addon/gnome-shell-integration/
@@ -74,4 +74,5 @@ https://extensions.gnome.org/extension/120/system-monitor/
   systemctl enable tlp && tlp start
   
 flatpak install motrix
+
 configurar usuarios, serviços online, navegador e configurações de energia.
