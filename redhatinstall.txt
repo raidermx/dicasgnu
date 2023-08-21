@@ -70,8 +70,8 @@ https://extensions.gnome.org/extension/19/user-themes/
 https://extensions.gnome.org/extension/120/system-monitor/
 
 ## otimizar bateria do notebook
-  apt install tlp tlp-rdw
-  systemctl enable tlp && tlp start
+  sudo dnf install tlp tlp-rdw
+  sudo systemctl enable tlp && tlp start
   
 flatpak install Motrix
 flatpak inatall PeaZip
