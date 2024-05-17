@@ -5,7 +5,7 @@ apt show pacote - descrição do pacote
 apropos pacote
 aptitude search pacote | less
 man pacote - manual do pacote
-apt install vim
+apt install vim neovim
 apt install aria2
 aria2c linkdodownload
 ethtool interface - para testar conectividade
