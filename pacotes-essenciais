@@ -209,7 +209,7 @@ firefox esr
 apt install firefox-esr
 
 libreoffice
-apt install libreoffice-l10n-pt-br
+apt install libreoffice libreoffice-l10n-pt-br
 
 família de fontes liberation
 apt install fonts-liberation
@@ -249,6 +249,9 @@ apt install librecad
 freecad - desenho parametrizado 3D
 apt install freecad
 
+blender - desenho espacial 3D
+apt install blender
+
 libreoffice impress - slides
 libreoffice calc - planilhas
 libreoffice writer - word
@@ -275,18 +278,26 @@ cortar a parte desejada e exportar.
 https://github.com/mifi/lossless-cut/releases/tag/v3.37.0
 
 editor de video-aulas 
-kdenlive e openshot
+kdenlive, shotcut e openshot
 apt install kdenlive
+apt install shotcut
 apt install openshot
 
-reprodutorap
-mpv e vlc
+reprodutor de vídeo e áudio
+mpv, vlc, smplayer, audacious e kodi
 apt install mpv
 apt install vlc
+apt install smplayer
+apt install kodi
+apt install audacious
 
 gravador de audio
 audacity
 apt install audacity
+
+partituras - https://musescore.org/pt-br
+musescore
+apt install musescore
 
 buscar imagens específicas - otimizar o fluxo de trabalho
 ls | grep jpg
@@ -402,8 +413,22 @@ sudo apt-get update
 sudo apt-get install -y mongodb-org
 
 virtualização
+virt-manager:
 sudo apt install virt-manager
 sudo adduser $USER libvirt
+
+virtualbox:
+https://www.virtualbox.org/wiki/Linux_Downloads
+
+vmware:
+https://www.vmware.com/go/getplayer-linux
+
+vagrant:
+wget -O- https://apt.releases.hashicorp.com/gpg | sudo gpg --dearmor -o /usr/share/keyrings/hashicorp-archive-keyring.gpg
+echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/hashicorp.list
+sudo apt update && sudo apt install vagrant
+
+
 
 conteiners
 
