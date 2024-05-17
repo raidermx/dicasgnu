@@ -281,7 +281,7 @@ editor de video-aulas
 kdenlive, shotcut e openshot
 apt install kdenlive
 apt install shotcut
-apt install openshot
+apt install openshot-qt
 
 reprodutor de vídeo e áudio
 mpv, vlc, smplayer, audacious e kodi
@@ -437,6 +437,14 @@ apt install docker.io
 
 criar chave privada
 ssh-keygen -o -a 100 -t ed25519 -f ~/.ssh/id_ed25519 -C "user@email.com"
+
+acesso remoto
+apt install openssh-server
+
+anydesk
+cd /tmp && wget -qO- https://keys.anydesk.com/repos/DEB-GPG-KEY | sudo gpg --dearmour -o /etc/apt/trusted.gpg.d/anydesk.gpg && cd $HOME
+echo "deb http://deb.anydesk.com/ all main" | sudo tee /etc/apt/sources.list.d/anydesk-stable.list
+sudo apt update && sudo apt install anydesk
 
 adicionar chave no agente ssh
 eval "$(ssh-agent -s)"
