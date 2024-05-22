@@ -331,8 +331,23 @@ sudo apt install build-essential default-jdk libssl-dev exuberant-ctags ncurses-
 
 sudo apt install build-essential autoconf m4 libncurses5-dev libwxgtk3.0-gtk3-dev libgl1-mesa-dev libglu1-mesa-dev libpng-dev libssh-dev unixodbc-dev xsltproc fop libxml2-utils libncurses-dev openjdk-11-jdk
 
-delphi
-apt install lazarus
+programação delphi:
+
+lazarus-project(https://sourceforge.net/projects/lazarus/files/):
+
+wget -ct0 https://sourceforge.net/projects/lazarus/files/Lazarus%20Linux%20amd64%20DEB/Lazarus%203.2/lazarus-project_3.2.0-0_amd64.deb
+
+fpc-laz:
+
+wget https://sourceforge.net/projects/lazarus/files/Lazarus%20Linux%20amd64%20DEB/Lazarus%203.2/fpc-laz_3.2.2-210709_amd64.deb
+
+fpc-src:
+wget https://sourceforge.net/projects/lazarus/files/Lazarus%20Linux%20amd64%20DEB/Lazarus%203.2/fpc-src_3.2.2-210709_amd64.deb
+
+Passo 4. Agora instale o programa com os comandos abaixo:
+
+sudo apt install ./fpc*.deb ./lazarus-project*.deb
+
 
 
 todas as linguagens:
