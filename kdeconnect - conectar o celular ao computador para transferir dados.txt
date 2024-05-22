@@ -1,0 +1,114 @@
+O KDE Connect fornece um conjunto de recursos para integrar seu fluxo de trabalho entre dispositivos:
+
+- Área de transferência compartilhada: copie e cole entre seus dispositivos.
+- Compartilhe arquivos e URLs em seu computador a partir de qualquer app.
+- Receba notificações de chamadas recebidas e mensagens SMS no seu PC.
+- Touchpad virtual: use a tela do telefone como touchpad do computador.
+- Sincronização de notificações: leia as notificações do seu Android na área de trabalho.
+- Controle remoto multimídia: use seu telefone como controle remoto para reprodutores de mídia Linux.
+- Conexão Wi-Fi: sem necessidade de cabos USB ou bluetooth.
+- Criptografia TLS de ponta a ponta: suas informações estão seguras.
+
+Observe que você precisará instalar o KDE Connect no seu computador para que este aplicativo funcione e mantenha a versão para desktop atualizada com a versão do Android para que os recursos mais recentes funcionem.
+
+Informações a respeito de permissões especiais :
+* Permissão de acessibilidade: necessária para receber entrada de outro dispositivo para controlar seu telefone Android, se você usar o recurso de entrada remota.
+* Permissão de localização em segundo plano: necessária para saber a qual rede Wi-Fi você está conectado, se você usar o recurso de redes confiáveis.
+
+O KDE Connect nunca envia nenhuma informação ao KDE nem a terceiros. O KDE Connect envia dados de um dispositivo para outro diretamente usando a rede local, nunca pela Internet e usando criptografia de ponta a ponta.
+
+Este aplicativo faz parte de um projeto de código aberto e existe graças a todas as pessoas que contribuíram para ele. Visite o site para obter o código-fonte.https://kdeconnect.kde.org/
+
+Para o KDE Connect funcionar é preciso liberar as portas do firewall
+
+no Windows o firewall é liberado durante a instalação.
+
+no Linux:
+** Fonte >>> KDEConnect - KDE UserBase Wiki 3
+
+ufw
+
+If your firewall is ufw , you can open the necessary ports with:
+
+sudo ufw allow 1714:1764/udp
+sudo ufw allow 1714:1764/tcp
+sudo ufw reload
+firewalld
+
+If your firewall is firewalld , you can open the necessary ports with:
+
+sudo firewall-cmd --zone=public --permanent --add-port=1714-1764/tcp
+sudo firewall-cmd --zone=public --permanent --add-port=1714-1764/udp
+sudo systemctl restart firewalld.service
+Fedora firewall
+
+In Fedora, there is an utility for configuring the firewall. Open Firewall Configuration (the program’s filename is firewall-config ), and in Zones ➔ Services check the kde-connect service.
+
+Make sure you have chosen the Permanent Configuration in the drop-down at the top, otherwise these settings will be reset upon reboot.
+iptables
+
+If your firewall is iptables , you can open the necessary ports with:
+
+sudo iptables -I INPUT -i -p udp --dport 1714:1764 -m state --state NEW,ESTABLISHED -j ACCEPT
+sudo iptables -I INPUT -i -p tcp --dport 1714:1764 -m state --state NEW,ESTABLISHED -j ACCEPT
+sudo iptables -A OUTPUT -o -p udp --sport 1714:1764 -m state --state NEW,ESTABLISHED -j ACCEPT
+sudo iptables -A OUTPUT -o -p tcp --sport 1714:1764 -m state --state NEW,ESTABLISHED -j ACCEPT
+
+
+
+
+links de download - https://kdeconnect.kde.org/download.html
+
+windows - msstore
+https://apps.microsoft.com/detail/9n93mrmsxbf0?rtc=1&hl=pt-br&gl=BR
+
+google play
+https://play.google.com/store/apps/details?id=org.kde.kdeconnect_tp
+
+apple store
+https://apps.apple.com/us/app/kde-connect/id1580245991
+
+linux
+
+gnome
+apt install gnome-browser-connector
+https://extensions.gnome.org/extension/1319/gsconnect/
+
+kde
+apt install kdeconnector
+
+
+Arch Linux
+Package is available in the Arch Linux User Repository (AUR): gnome-browser-connector.
+To install package type:
+$ pacman -Sy gnome-browser-connector
+
+Debian Linux
+Package is available in Stable: chrome-gnome-shell.
+To install package type:
+$ sudo apt-get install chrome-gnome-shell
+
+Fedora Linux
+Package is available in Fedora 36 and newer: gnome-browser-connector.
+To install it type:
+# dnf install gnome-browser-connector
+
+Gentoo Linux
+Ebuild is available in main tree. Just type as root user:
+# emerge -av gnome-extra/gnome-browser-connector
+
+Ubuntu Linux
+Package is available in Ubuntu 23.04 and newer: gnome-browser-connector
+To install package type:
+$ sudo apt install gnome-browser-connector
+With older versions use: chrome-gnome-shell
+To install package type:
+$ sudo apt install chrome-gnome-shell
+
+
+huawei
+https://appgallery.huawei.com/app/C104724723?sharePrepath=ag
+
+fdroid
+https://f-droid.org/packages/org.kde.kdeconnect_tp/
+
